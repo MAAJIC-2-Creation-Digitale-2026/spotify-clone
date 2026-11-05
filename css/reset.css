@@ -1,0 +1,46 @@
+/* =========================================================
+   reset.css — remise à zéro commune (on n'y touche pas)
+   ========================================================= */
+
+/* Toutes les boîtes, y compris les pseudo-éléments ::before et ::after,
+   comptent le padding et la bordure DANS leur largeur */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--police);
+  font-size: var(--taille-s);
+  color: var(--texte-principal);
+  background-color: var(--fond-page);
+  line-height: 1.5;
+}
+
+/* Une image ne déborde jamais de son conteneur */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Les boutons et champs prennent la police de la page */
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Les liens gardent la couleur de leur parent */
+a {
+  color: inherit;
+  text-decoration: none;
+}

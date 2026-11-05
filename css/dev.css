@@ -1,0 +1,51 @@
+/* =========================================================
+   dev.css — mise en page des bacs à sable (dossier dev/)
+   Utilisé seulement par les pages de test, pas par le site.
+   Mobile d'abord, comme le reste du projet.
+   ========================================================= */
+
+.bac-a-sable {
+  min-height: 100vh;
+}
+
+.bac-a-sable__titre {
+  padding: var(--espace-2);
+  color: var(--texte-secondaire);
+  font-size: var(--taille-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* La zone imite la place que le composant aura dans la vraie page */
+.bac-a-sable__zone {
+  display: grid;
+}
+
+/* Dans le bac à sable, il n'y a pas les zones de layout.css :
+   on annule le placement en zone nommée */
+.bac-a-sable__zone > * {
+  grid-area: auto;
+}
+
+/* Le panneau est caché sur mobile par layout.css : on le montre quand même ici */
+.bac-a-sable__zone--panneau > .panneau {
+  display: block;
+}
+
+.bac-a-sable__zone--home,
+.bac-a-sable__zone--playlist { height: 80vh; }
+
+/* ---------- Tablette (à partir de 768px) ---------- */
+@media (min-width: 768px) {
+  .bac-a-sable { padding: var(--espace-4); }
+  .bac-a-sable__titre { padding: 0 0 var(--espace-4); }
+  .bac-a-sable__zone--header  { height: var(--hauteur-header); }
+  .bac-a-sable__zone--player  { height: var(--hauteur-player); }
+  .bac-a-sable__zone--sidebar { width: var(--largeur-sidebar-repliee); height: 80vh; }
+  .bac-a-sable__zone--panneau { width: var(--largeur-panneau); height: 80vh; }
+}
+
+/* ---------- Ordinateur (à partir de 1024px) ---------- */
+@media (min-width: 1024px) {
+  .bac-a-sable__zone--sidebar { width: var(--largeur-sidebar); }
+}

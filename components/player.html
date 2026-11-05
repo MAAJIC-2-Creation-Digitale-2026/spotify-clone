@@ -1,0 +1,37 @@
+<!-- =========================================================
+     COMPOSANT : Lecteur (barre du bas)
+     Responsable : ______________
+     Fichier CSS : css/player.css
+     Préfixe     : toutes tes classes commencent par .player  (ex. .player__titre)
+     Bac à sable : dev/player.html
+     ---------------------------------------------------------
+     À construire : à gauche : pochette + titre + artiste · au centre : shuffle, précédent, PLAY (rond blanc), suivant, repeat + barre de progression avec les temps · à droite : volume
+     Responsive   : mobile (base) : mini-lecteur (pochette + titre + play), barre de progression fine · à partir de la tablette : lecteur complet en 3 colonnes
+     Notions      : Flexbox en 3 colonnes, <input type="range">, boutons-icônes, :hover
+     ---------------------------------------------------------
+     Rappels :
+     - ce fichier ne contient QUE ton composant (pas de <html>, <head>, <body>)
+     - les chemins d'images partent de la racine du projet :
+       <img src="assets/img/pochettes/album-1.jpg" alt="...">
+     - pas de <script> ici : il ne serait pas exécuté
+     ---------------------------------------------------------
+     Le lecteur MARCHE VRAIMENT grâce à js/player.js (fourni).
+     Le script retrouve tes éléments grâce aux attributs data-player :
+       <audio data-player="audio"></audio>            (obligatoire, invisible)
+       <img data-player="pochette" alt="">            pochette du titre en cours
+       <p data-player="titre">  <p data-player="artiste">
+       <button data-player="play" aria-label="Lecture">
+         <i class="fa-solid fa-play" aria-hidden="true"></i>
+       </button>                                      l'icône passe seule en fa-pause
+       <button data-player="precedent">  <button data-player="suivant">
+       <input type="range" data-player="progression" value="0">
+       <span data-player="temps">0:00</span>  <span data-player="duree">0:00</span>
+       <input type="range" data-player="volume" min="0" max="1" step="0.01" value="0.8">
+     Pendant la lecture, la classe .est-en-lecture est ajoutée à .player
+     (pratique pour changer un style). Les classes et le CSS restent à toi.
+     ========================================================= -->
+
+<footer class="player">
+  <!-- Supprime ce repère quand tu commences ton composant -->
+  <p class="a-faire">Lecteur — titre en cours · contrôles · volume</p>
+</footer>

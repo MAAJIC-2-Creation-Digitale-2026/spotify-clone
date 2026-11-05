@@ -1,0 +1,89 @@
+/* =========================================================
+   tokens.css — LE GUIDE DE STYLE DE L'ÉQUIPE, EN VARIABLES
+   Responsable : le / la lead intégration  →  ______________
+   ---------------------------------------------------------
+   Règle d'équipe : on ne met JAMAIS une couleur, une taille
+   ou un espacement « en dur » dans son CSS. On utilise une
+   variable d'ici : color: var(--texte-secondaire);
+   Besoin d'une nouvelle variable ? On la demande au lead.
+
+   Valeurs relevées le 04/11 sur open.spotify.com (ordinateur),
+   voir la page « Guide de style » du Figma.
+   Jour 1 : le / la lead vérifie, complète si besoin
+   (tablette, téléphone), puis ce fichier est FIGÉ.
+   ========================================================= */
+
+/* Police : Figtree, la plus proche de celle de Spotify (SpotifyMixUI, qui n'est pas libre) */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800&display=swap');
+
+:root {
+  /* ---------- Couleurs : fonds (du plus sombre au plus clair) ---------- */
+  --fond-page: #000000;          /* derrière les blocs */
+  --fond-bloc: #121212;          /* sidebar, zone principale, panneau */
+  --fond-carte: #181818;         /* carte d'album au repos (si besoin) */
+  --fond-survol: #1f1f1f;        /* champ de recherche, bouton Accueil, carte survolée */
+  --fond-actif: #2a2a2a;         /* ligne du tableau survolée, élément sélectionné */
+  --fond-pilule: rgba(255, 255, 255, 0.07);  /* filtres « Tout / Musique / Podcasts » */
+  --fond-clair: #ffffff;         /* bouton « Découvrir Premium », filtre actif */
+
+  /* ---------- Couleurs : texte ---------- */
+  --texte-principal: #ffffff;
+  --texte-secondaire: #b3b3b3;   /* artiste, album, durée, petites infos */
+  --texte-sur-clair: #000000;    /* texte posé sur un fond blanc */
+
+  /* ---------- Couleur d'accent : le vert Spotify ---------- */
+  --accent: #1ed760;
+  --accent-survol: #3be477;
+  --texte-sur-accent: #000000;   /* triangle noir du gros bouton play vert */
+
+  /* ---------- Typographie ---------- */
+  --police: 'Figtree', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --taille-xs: 0.75rem;   /* 12px : petites mentions */
+  --taille-s: 0.875rem;   /* 14px : artiste, album, durée, texte courant */
+  --taille-m: 1rem;       /* 16px : titre d'un morceau, champ de recherche */
+  --taille-l: 1.5rem;     /* 24px : titres de sections (« Artistes populaires ») */
+  --taille-xl: 2rem;      /* 32px : grand titre de playlist sur téléphone */
+  --taille-xxl: 6rem;     /* 96px : grand titre de playlist sur ordinateur */
+  --graisse-normale: 400;
+  --graisse-moyenne: 500;
+  --graisse-forte: 700;
+
+  /* ---------- Espacements (toujours des multiples de 4px) ---------- */
+  --espace-1: 4px;
+  --espace-2: 8px;        /* espace entre les blocs de la page */
+  --espace-3: 12px;
+  --espace-4: 16px;
+  --espace-6: 24px;
+  --espace-8: 32px;
+
+  /* ---------- Arrondis ---------- */
+  --arrondi-s: 4px;      /* lignes du tableau, petites pochettes */
+  --arrondi-carte: 6px;  /* pochettes des cartes de l'accueil */
+  --arrondi-m: 8px;      /* blocs de la page */
+  --arrondi-rond: 500px; /* pilules (recherche, filtres, boutons) ; pour un rond parfait : 50% */
+
+  /* ---------- Tailles des éléments ---------- */
+  --hauteur-champ: 48px;        /* barre de recherche */
+  --taille-bouton-rond: 48px;   /* bouton Accueil (maison) */
+  --taille-bouton-play: 56px;   /* gros bouton play vert de la playlist */
+  --hauteur-ligne: 56px;        /* une ligne de la liste des titres */
+  --hauteur-pilule: 32px;       /* filtres en pilules */
+  --taille-pochette: 170px;     /* pochette d'une carte de l'accueil (ordinateur) */
+
+  /* ---------- Tailles des zones (utilisées par layout.css) ---------- */
+  --hauteur-header: 64px;
+  --hauteur-player: 72px;
+  --largeur-sidebar: 284px;
+  --largeur-sidebar-repliee: 72px;
+  --largeur-panneau: 300px;
+
+  /* ---------- Animations ---------- */
+  --duree-transition: 0.2s;
+
+  /* ---------- Points de rupture (pour mémoire) ----------
+     MOBILE D'ABORD : le CSS de base est pour le téléphone.
+     Les variables ne marchent pas dans @media, donc on écrit
+     les valeurs à la main, mais TOUJOURS celles-ci :
+       tablette   : @media (min-width: 768px)
+       ordinateur : @media (min-width: 1024px)              */
+}

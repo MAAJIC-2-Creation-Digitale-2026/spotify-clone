@@ -1,0 +1,113 @@
+/* =========================================================
+   layout.css — LE PLAN DE LA PAGE (où va chaque zone)
+   Responsable : le / la lead intégration  →  ______________
+   ---------------------------------------------------------
+   La page est une grille CSS avec des zones nommées.
+   Chaque composant se place dans SA zone grâce à grid-area
+   (déjà écrit en bas de ce fichier).
+
+   MOBILE D'ABORD : les règles de base sont pour le téléphone,
+   puis on AJOUTE des règles pour les écrans plus larges
+   avec @media (min-width: ...).
+   ========================================================= */
+
+/* ---------- Mobile (par défaut) ----------
+   Une seule colonne. La sidebar devient la barre de navigation
+   du bas, sous le lecteur (comme dans l'appli Spotify)
+
+   ┌─ header ─┐
+   │   main   │
+   ├─ player ─┤
+   └─ sidebar ┘                                              */
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "player"
+    "sidebar";
+  height: 100vh;               /* l'appli occupe tout l'écran, sans scroll de page */
+  height: 100dvh;              /* sur téléphone : la hauteur réellement visible (sans la barre d'adresse) */
+}
+
+/* Les blocs de contenu : fond gris foncé, et chacun défile
+   tout seul si son contenu est trop long */
+.sidebar,
+.main,
+.panneau {
+  background-color: var(--fond-bloc);
+  overflow-y: auto;
+  min-height: 0;               /* indispensable pour que overflow marche dans une grille */
+}
+
+/* Sur mobile, pas de panneau de droite */
+.panneau {
+  display: none;
+}
+
+/* ---------- Tablette (à partir de 768px) ----------
+   La sidebar passe à gauche, repliée en icônes.
+   Les blocs se détachent du fond avec un espace et des coins arrondis */
+@media (min-width: 768px) {
+  .app {
+    grid-template-columns: var(--largeur-sidebar-repliee) 1fr;
+    grid-template-rows: var(--hauteur-header) 1fr var(--hauteur-player);
+    grid-template-areas:
+      "header  header"
+      "sidebar main"
+      "player  player";
+    gap: var(--espace-2);
+    padding: 0 var(--espace-2) var(--espace-2);   /* pas d'espace au-dessus du header, comme chez Spotify */
+  }
+
+  .sidebar,
+  .main,
+  .panneau {
+    border-radius: var(--arrondi-m);
+  }
+}
+
+/* ---------- Ordinateur (à partir de 1024px) ----------
+
+   ┌──────────────── header ────────────────┐
+   │ sidebar │       main        │ panneau  │
+   └──────────────── player ────────────────┘            */
+@media (min-width: 1024px) {
+  .app {
+    grid-template-columns: var(--largeur-sidebar) 1fr var(--largeur-panneau);
+    grid-template-areas:
+      "header  header  header"
+      "sidebar main    panneau"
+      "player  player  player";
+  }
+
+  .panneau {
+    display: block;
+  }
+}
+
+/* ---------- Chaque composant dans sa zone ---------- */
+.header  { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main    { grid-area: main; }
+.panneau { grid-area: panneau; }
+.player  { grid-area: player; }
+
+/* ---------- Repère provisoire « zone à construire » ----------
+   Utilisé dans les composants vides. On supprime les .a-faire
+   au fur et à mesure, puis cette règle à la fin du projet. */
+.a-faire {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: 56px;
+  padding: var(--espace-4);
+  border: 2px dashed var(--texte-secondaire);
+  border-radius: var(--arrondi-m);
+  color: var(--texte-secondaire);
+  text-align: center;
+  overflow: hidden;
+}
