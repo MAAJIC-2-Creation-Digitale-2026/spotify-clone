@@ -3,7 +3,7 @@
 Projet d'équipe du module HTML/CSS : on reproduit **open.spotify.com** tel quel, en équipe, chacun·e son composant.
 5 jours : jeu. 05/11 · mar. 10/11 · jeu. 12/11 · ven. 13/11 · mar. 17/11. **Rendu le mar. 17/11 à 12h00.**
 
-- 🎨 **Maquette Figma** (captures + page « Guide de style ») : _lien à venir_
+- 🎨 **Maquette** (captures ordinateur et téléphone + relevés des mesures) : [dossier Drive, en lecture seule](https://drive.google.com/drive/folders/17HLtT-RKTaBV5tGGkyPMQKInZ43wElMk) — les noms de captures cités dans les issues (`01-accueil-haut`…) sont dans les sous-dossiers `desktop/` et `telephone/`. Le fichier Figma avec la page « Guide de style » remplacera ce lien.
 - 🌐 **Site en ligne** (GitHub Pages) : https://maajic-2-creation-digitale-2026.github.io/spotify-clone/
 - ✅ **Tes tâches** : [onglet Issues](https://github.com/MAAJIC-2-Creation-Digitale-2026/spotify-clone/issues), une issue par composant avec sa checklist
 - 📋 **Le contenu commun** (artistes, titres, playlists, noms de fichiers) : la Google Sheet partagée par Amélie
@@ -126,7 +126,7 @@ Le site en ligne (GitHub Pages) est publié depuis la branche `main`.
   <i class="fa-solid fa-play" aria-hidden="true"></i>
   ```
 - Logo Spotify : l'icône `<i class="fa-brands fa-spotify"></i>`, ou le SVG récupéré dans l'onglet **Elements** des DevTools sur open.spotify.com (comme le logo du YouTube clone), enregistré dans `assets/img/`.
-- Le logo et le favicon actuels (`assets/img/`) sont **provisoires** : à remplacer le jour 1 par le / la lead.
+- Le logo (`logo.svg`) et le favicon (`favicon.svg`) sont à ajouter dans `assets/img/` le jour 1 par le / la lead (1re Pull Request).
 
 ## 7. Tech stack et documentation
 
