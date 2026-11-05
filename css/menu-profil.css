@@ -1,0 +1,37 @@
+/* =========================================================
+   menu-profil.css — Menu du profil (tiroir du téléphone, menu déroulant sur ordinateur) — issue #8
+   Responsable : ______________
+   ---------------------------------------------------------
+   Règles :
+   - toutes les classes commencent par .menu-profil
+   - couleurs, tailles, espacements : uniquement des var(--...) de tokens.css
+   - on ne touche pas aux fichiers des autres
+   ---------------------------------------------------------
+   Bon à savoir :
+   - un popover ouvert s'affiche au-dessus de toute la page (« top layer ») :
+     pas besoin de z-index, ni de place dans la grille de layout.css
+   - par défaut le navigateur le centre avec une bordure : c'est à toi de le placer
+   - le fond assombri derrière se règle avec .menu-profil::backdrop
+   ========================================================= */
+
+.menu-profil {
+  /* tes styles ici (le tiroir du téléphone) */
+}
+
+.menu-profil::backdrop {
+  /* le fond assombri derrière le tiroir */
+}
+
+
+/* MOBILE D'ABORD : les styles ci-dessus sont pour le téléphone.
+   On ajoute dessous ce qui change sur les écrans plus larges. */
+
+/* ---------- Tablette (à partir de 768px) ---------- */
+@media (min-width: 768px) {
+
+}
+
+/* ---------- Ordinateur (à partir de 1024px) ---------- */
+@media (min-width: 1024px) {
+
+}

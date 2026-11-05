@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bac à sable — menu-profil</title>
+  <!-- base : tous les chemins partent de la racine du projet, comme dans index.html -->
+  <base href="../">
+  <link rel="icon" href="assets/img/favicon.svg">
+
+  <!-- Icônes : Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Styles : d'abord les communs (tokens, reset, layout), puis 1 fichier par composant -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/dev.css">
+  <link rel="stylesheet" href="css/menu-profil.css">
+
+  <!-- Le script qui assemble les composants (defer = après le chargement du HTML) -->
+  <script src="js/include.js" defer></script>
+</head>
+<body class="bac-a-sable">
+  <!-- BAC À SABLE : Menu du profil (issue #8)
+       Ouvre cette page avec Live Server pour coder ton composant tout seul,
+       sans attendre les autres. Change la largeur de la fenêtre (ou le mode
+       appareil des DevTools) pour tester ton responsive. -->
+  <p class="bac-a-sable__titre">Bac à sable · menu-profil</p>
+
+  <!-- Bouton de test : il joue le rôle du bouton avatar du header -->
+  <button class="bac-a-sable__bouton" popovertarget="menu-profil">Ouvrir le menu (comme l'avatar)</button>
+
+  <div data-include="components/menu-profil.html"></div>
+</body>
+</html>

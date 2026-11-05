@@ -32,6 +32,16 @@
   display: block;
 }
 
+/* Bouton de test du menu du profil (il remplace l'avatar du header) */
+.bac-a-sable__bouton {
+  margin: 0 var(--espace-2);
+  padding: var(--espace-2) var(--espace-4);
+  border-radius: var(--arrondi-rond);
+  background: var(--fond-clair);
+  color: var(--texte-sur-clair);
+  font-weight: var(--graisse-forte);
+}
+
 .bac-a-sable__zone--home,
 .bac-a-sable__zone--playlist { height: 80vh; }
 

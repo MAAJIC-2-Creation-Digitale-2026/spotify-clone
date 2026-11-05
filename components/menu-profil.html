@@ -1,0 +1,30 @@
+<!-- =========================================================
+     COMPOSANT : Menu du profil (tiroir du téléphone, menu déroulant sur ordinateur) — issue #8
+     Responsable : ______________
+     Fichier CSS : css/menu-profil.css
+     Préfixe     : toutes tes classes commencent par .menu-profil  (ex. .menu-profil__carte)
+     Bac à sable : dev/menu-profil.html
+     ---------------------------------------------------------
+     À construire : carte du profil · « Ajouter un compte » · 4 liens avec icônes ·
+                    2 boutons ronds (Activité, Inviter des amis) · bloc « Messages »
+     Responsive   : téléphone (base) : tiroir collé à gauche, ≈ 84 % de large, toute la hauteur
+                    à partir de 768px : petit menu déroulant en haut à droite, sous l'avatar, sans « Messages »
+     Notions      : attribut popover, ::backdrop, position, Flexbox, listes, icônes Font Awesome
+     ---------------------------------------------------------
+     Comment il s'ouvre (sans JavaScript) :
+     - ce composant a l'attribut popover : il est caché tant qu'on ne l'ouvre pas
+     - n'importe quel bouton avec popovertarget="menu-profil" l'ouvre et le ferme
+       (dans le site : le bouton avatar du header, ajouté par le / la lead ;
+        dans le bac à sable : le bouton de test)
+     - un clic en dehors, ou la touche Échap, le referme tout seul
+     ---------------------------------------------------------
+     Rappels :
+     - ce fichier ne contient QUE ton composant (pas de <html>, <head>, <body>)
+     - garde id="menu-profil" et l'attribut popover sur la balise <aside>
+     - pas de <script> ici : il ne serait pas exécuté
+     ========================================================= -->
+
+<aside id="menu-profil" class="menu-profil" popover aria-label="Menu du profil">
+  <!-- Supprime ce repère quand tu commences ton composant -->
+  <p class="a-faire">Menu du profil</p>
+</aside>
