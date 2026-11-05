@@ -9,7 +9,86 @@
    ========================================================= */
 
 .header {
-  /* tes styles ici */
+   position: sticky;
+   top: 0;
+   z-index: 1;
+   background-color: var(--fond-bloc);
+   width: 100%;
+   font-family: var(--police);
+   font-weight: var(--graisse-normale);
+   overflow: auto;
+}
+
+
+.header-content {
+   display: flex;
+   align-items: center;
+   gap: var(--espace-3);
+   height: var(--taille-bouton-play);
+   padding: 0 var(--espace-4);
+   box-sizing: border-box;
+}
+
+
+.header-avatar-btn {
+   width: var(--hauteur-pilule);
+   height: var(--hauteur-pilule);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: var(--taille-s);
+   text-decoration: none;
+   flex-shrink: 0;
+}
+
+.header-avatar-img{
+   width: 100%;
+   height: 100%;
+   border-radius: var(--arrondi-rond);
+   object-fit: cover;
+}
+
+
+.header-nav-chips {
+   display: flex;
+   align-items: center;
+   gap: var(--espace-2);
+   overflow-x: auto;
+   scrollbar-width: none;
+   -webkit-overflow-scrolling: touch;
+}
+
+.header-nav-chips::-webkit-scrollbar {
+   display: none; 
+}
+
+
+.header-chip {
+   height: var(--hauteur-pilule);
+   padding: 0 var(--espace-4);
+   border-radius: var(--arrondi-rond);
+   border: none;
+   background-color: var(--fond-pilule);
+   color: var(--texte-principal);
+   font-size: var(--taille-s);
+   white-space: nowrap;
+   cursor: pointer;
+   transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.header-chip:hover {
+   background-color: var(--fond-survol);
+}
+
+.header-chip:active {
+   transform: scale(0.96);
+}
+
+
+.header-chip.active {
+   background-color: var(--accent);
+   color: var(--texte-sur-clair);
+   font-weight: var(--graisse-forte);
 }
 
 
