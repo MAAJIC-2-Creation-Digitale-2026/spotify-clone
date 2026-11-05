@@ -102,5 +102,8 @@
 
 /* ---------- Ordinateur (à partir de 1024px) ---------- */
 @media (min-width: 1024px) {
-
+   /* On cache le header sur ordinateur */
+   .header-content{
+      display: none;
+   }
 }
