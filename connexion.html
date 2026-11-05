@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion — Spotify (clone)</title>
+  <link rel="icon" href="assets/img/favicon.svg">
+
+  <!-- Icônes : Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Styles : d'abord les communs (tokens, reset, layout), puis 1 fichier par composant -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/connexion.css">
+
+  <!-- Le script qui assemble les composants (defer = après le chargement du HTML) -->
+  <script src="js/include.js" defer></script>
+</head>
+<body>
+  <!-- PAGE DE CONNEXION : pas de sidebar ni de lecteur, juste le formulaire -->
+  <main>
+    <div data-include="components/connexion.html"></div>
+  </main>
+</body>
+</html>

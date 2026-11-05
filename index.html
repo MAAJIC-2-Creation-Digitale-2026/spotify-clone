@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil — Spotify (clone)</title>
+  <link rel="icon" href="assets/img/favicon.svg">
+
+  <!-- Icônes : Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Styles : d'abord les communs (tokens, reset, layout), puis 1 fichier par composant -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/playlist.css">
+  <link rel="stylesheet" href="css/player.css">
+  <link rel="stylesheet" href="css/panneau.css">
+
+  <!-- Le script qui assemble les composants (defer = après le chargement du HTML) -->
+  <script src="js/include.js" defer></script>
+  <!-- Le script qui fait marcher le lecteur (attend que les composants soient chargés) -->
+  <script src="js/player.js" defer></script>
+</head>
+<body>
+  <!-- PAGE D'ACCUEIL : chaque <div data-include> est remplacé par son composant.
+       Seul·e le / la lead modifie ce fichier. -->
+  <div class="app">
+
+    <div data-include="components/header.html"></div>
+
+    <div data-include="components/sidebar.html"></div>
+
+    <main class="main">
+      <div data-include="components/home.html"></div>
+    </main>
+
+    <div data-include="components/panneau.html"></div>
+
+    <div data-include="components/player.html"></div>
+
+  </div>
+</body>
+</html>
