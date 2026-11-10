@@ -1,0 +1,19 @@
+<!--
+  COMPOSANT : ligne-titre · ticket T06 · Une ligne de la liste des titres
+  Maquette : telephone/02-accueil-page-entiere.png (« Lancer la lecture »)
+
+  Trous : {{image}} pochette · {{titre}} titre du morceau · {{artiste}} artiste
+          {{piste}} numéro de piste du lecteur (0, 1, 2…) : un clic lance le morceau
+
+  À FAIRE : à l'intérieur de <div class="ligne-titre">
+    <img class="ligne-titre-image" src="{{image}}" alt="">
+    <div class="ligne-titre-textes">
+      <p class="ligne-titre-titre">{{titre}}</p>
+      <p class="ligne-titre-artiste">{{artiste}}</p>
+    </div>
+    <button class="ligne-titre-plus" aria-label="Plus d'options"><i class="fa-solid fa-ellipsis-vertical" aria-hidden="true"></i></button>
+-->
+<div class="ligne-titre" data-piste="{{piste}}">
+  <!-- ton HTML ici -->
+  ligne-titre (T06) : {{titre}} — {{artiste}}
+</div>

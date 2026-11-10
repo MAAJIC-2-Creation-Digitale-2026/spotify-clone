@@ -1,0 +1,59 @@
+/* =====================================================================
+   bac-a-sable.css — le style des BACS À SABLE (dossier dev/). Fourni.
+   Le cadre pointillé fait 390 px : la largeur d'un téléphone.
+   Ce fichier n'est JAMAIS chargé dans les vraies pages.
+   ===================================================================== */
+
+body.bac-a-sable {
+  margin: 0;
+  padding: 16px;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  font-family: "Figtree", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.bac-a-sable-titre {
+  margin: 0 0 4px;
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.bac-a-sable-titre a {
+  color: #1ed760;
+}
+
+.bac-a-sable-titre strong {
+  color: #fff;
+}
+
+.bac-a-sable-aide {
+  margin: 0 0 16px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Le « téléphone » */
+.bac-a-sable-cadre {
+  position: relative;
+  width: 390px;
+  max-width: 100%;
+  min-height: 200px;
+  padding: 16px;
+  background: #121212;
+  outline: 2px dashed #555;
+  overflow: hidden; /* comme un vrai écran : ce qui dépasse est coupé */
+}
+
+.bac-a-sable-cadre + .bac-a-sable-titre {
+  margin-top: 24px;
+}
+
+/* Pour les composants collés en bas (barre du bas, mini-lecteur) */
+.bac-a-sable-cadre--bas {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 300px;
+  padding: 0;
+}

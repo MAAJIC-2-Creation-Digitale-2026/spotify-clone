@@ -1,95 +1,93 @@
-/* =========================================================
-   include.js — OUTIL DE L'ÉQUIPE : ON N'Y TOUCHE PAS
-   ---------------------------------------------------------
-   Ce que fait ce script :
-   il cherche dans la page toutes les balises qui ont
-   l'attribut data-include="chemin/vers/composant.html",
-   va chercher ce fichier, et remplace la balise par son contenu.
+/* =====================================================================
+   include.js — pose les composants dans la page (version « petits composants »)
+   ---------------------------------------------------------------------
+   1. Un emplacement :
+        <div data-include="components/carte.html"
+             data-titre="Chill du dimanche"
+             data-image="assets/img/pochettes/chill-du-dimanche.jpg"></div>
 
-   Exemple dans index.html :
-     <div data-include="components/sidebar.html"></div>
-   devient, dans le navigateur :
-     <aside class="sidebar"> ... tout le contenu de sidebar.html ... </aside>
+   2. Dans le composant, les {{trous}} sont remplis avec les data-… :
+        <h3 class="carte-titre">{{titre}}</h3>   →   Chill du dimanche
 
-   ⚠️ Ça ne marche PAS en ouvrant le fichier en double-clic
-   (adresse en file:///). Il faut ouvrir la page avec
-   Live Server (adresse en http://127.0.0.1...) ou sur GitHub Pages.
-   ========================================================= */
+   3. Le trou spécial {{contenu}} reçoit ce qu'on a écrit ENTRE les balises
+      de l'emplacement (ex. : une rangée qui contient des cartes).
 
-// Fonction qui remplace chaque emplacement data-include par son composant
-async function inclureComposants(zone) {
-  // On récupère tous les emplacements de la zone (la page, ou un composant)
-  const emplacements = zone.querySelectorAll('[data-include]');
+   4. Un composant peut contenir d'autres composants : tout est chargé.
 
-  // On les traite un par un, dans l'ordre de la page
-  for (const emplacement of emplacements) {
-    // Le chemin du fichier à inclure, ex. "components/sidebar.html"
-    const chemin = emplacement.getAttribute('data-include');
+   5. Quand tout est chargé, la page reçoit l'évènement « composants-charges »
+      (js/player.js l'attend pour brancher le lecteur).
 
-    try {
-      // On demande le fichier au serveur
-      const reponse = await fetch(chemin);
+   ⚠ Ne marche pas en double-cliquant sur le fichier (file:///) :
+     ouvrir avec Live Server (clic droit → Open with Live Server).
+   ===================================================================== */
 
-      // Si le serveur répond « introuvable » (erreur 404 par ex.), on s'arrête
-      if (!reponse.ok) {
-        throw new Error('erreur ' + reponse.status);
-      }
+(function () {
+  "use strict";
 
-      // On lit le contenu du fichier comme du texte HTML
-      const html = await reponse.text();
-
-      // On le transforme en vraies balises grâce à un <template>
-      const modele = document.createElement('template');
-      modele.innerHTML = html;
-
-      // Un composant peut lui-même contenir des data-include : on les traite aussi
-      await inclureComposants(modele.content);
-
-      // On remplace l'emplacement par les balises du composant
-      emplacement.replaceWith(modele.content);
-    } catch (erreur) {
-      // En cas de problème, on affiche un message visible à la place du composant
-      afficherErreur(emplacement, chemin, erreur);
-    }
+  // data-image-ronde → dataset.imageRonde
+  function enCamel(nom) {
+    return nom.replace(/-([a-z])/g, (m, l) => l.toUpperCase());
   }
-}
 
-// Message d'erreur affiché dans la page (plus visible que la console)
-function afficherErreur(emplacement, chemin, erreur) {
-  const conseil = 'Vérifie le nom du fichier et son chemin dans data-include.';
+  function bandeau(message) {
+    const p = document.createElement("p");
+    p.textContent = message;
+    p.style.cssText =
+      "position:fixed;top:0;left:0;right:0;z-index:9999;margin:0;padding:12px;" +
+      "background:#c0392b;color:#fff;font:600 14px/1.4 sans-serif;text-align:center";
+    document.body.prepend(p);
+  }
 
-  emplacement.innerHTML =
-    '<p style="padding:12px;border:2px dashed #e22134;color:#e22134;font-family:sans-serif;">' +
-    '⚠️ Composant non chargé : <strong>' + chemin + '</strong><br>' + conseil +
-    '</p>';
+  async function chargerUn(bloc) {
+    const url = bloc.getAttribute("data-include");
+    let html;
+    try {
+      const reponse = await fetch(url, { cache: "no-cache" });
+      if (!reponse.ok) throw new Error("erreur " + reponse.status);
+      html = await reponse.text();
+    } catch (e) {
+      console.error("[include.js] Composant introuvable :", url, e);
+      html =
+        '<p style="color:#ff6b6b;border:1px dashed #ff6b6b;padding:8px;font-size:12px">' +
+        "Composant introuvable : " + url + "</p>";
+    }
 
-  console.error('[include.js] ' + chemin + ' : ' + erreur.message);
-}
+    const contenu = bloc.innerHTML;
+    html = html.replace(/\{\{\s*([\w-]+)\s*\}\}/g, (m, nom) => {
+      if (nom === "contenu") return contenu;
+      const valeur = bloc.dataset[enCamel(nom)];
+      return valeur === undefined ? "" : valeur;
+    });
 
-// Bandeau affiché en haut de la page si elle est ouverte en double-clic (file:///)
-function afficherBandeauFile() {
-  const bandeau = document.createElement('p');
-  bandeau.style.cssText =
-    'position:fixed;inset:0 0 auto 0;z-index:9999;margin:0;padding:16px;' +
-    'background:#e22134;color:#fff;font:16px/1.4 sans-serif;text-align:center;';
-  bandeau.textContent =
-    '⚠️ Page ouverte en file:/// : les composants ne peuvent pas se charger. ' +
-    'Dans VS Code, clic droit sur le fichier → Open with Live Server.';
-  document.body.prepend(bandeau);
-}
+    const modele = document.createElement("template");
+    modele.innerHTML = html;
+    bloc.replaceWith(modele.content);
+  }
 
-// Si la page est ouverte en file:///, on prévient et on s'arrête là
-if (window.location.protocol === 'file:') {
-  afficherBandeauFile();
-} else {
-  lancer();
-}
+  async function toutCharger() {
+    // On prend toujours le PREMIER emplacement de la page, jusqu'à ce qu'il n'y en ait plus.
+    // (Les composants rangés dans un autre composant sont donc chargés aussi.)
+    let garde = 0;
+    let bloc;
+    while ((bloc = document.querySelector("[data-include]")) && garde < 500) {
+      await chargerUn(bloc);
+      garde++;
+    }
+    if (garde >= 500) console.warn("[include.js] Plus de 500 composants : un composant s'inclut lui-même ?");
+  }
 
-// On lance le tout. Quand c'est fini, on prévient la page avec l'évènement
-// « composants-charges » (utile si on ajoute du JavaScript plus tard,
-// par ex. pour faire marcher le bouton play du lecteur).
-function lancer() {
-  inclureComposants(document).then(function () {
-    document.dispatchEvent(new Event('composants-charges'));
-  });
-}
+  async function demarrer() {
+    if (location.protocol === "file:") {
+      bandeau("Les composants ne s'affichent pas en file:/// — ouvre la page avec Live Server (clic droit → Open with Live Server).");
+      return;
+    }
+    await toutCharger();
+    document.dispatchEvent(new Event("composants-charges"));
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", demarrer, { once: true });
+  } else {
+    demarrer();
+  }
+})();

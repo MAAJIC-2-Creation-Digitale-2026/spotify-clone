@@ -1,0 +1,10 @@
+/* carte-artiste · ticket T05 — préfixe .carte-artiste
+   Mesures (téléphone 390 px) : largeur ≈ 150 px, ne rétrécit pas (flex-shrink: 0)
+     photo RONDE 150 × 150 (border-radius: 50% ; object-fit: cover)
+     nom blanc 14 px, CENTRÉ sous la photo                                          */
+
+.carte-artiste {
+}
+
+/* .carte-artiste-image */
+/* .carte-artiste-nom   */

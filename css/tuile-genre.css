@@ -1,0 +1,18 @@
+/* tuile-genre · ticket T09 — préfixe .tuile-genre
+   Mesures (téléphone 390 px) :
+     tuiles sur 2 colonnes, 12 px entre elles · hauteur ≈ 100 px · coins 6 px
+     titre blanc 16 px gras, en haut à gauche (16 px du bord)
+     pochette ≈ 64 px en bas à droite, PENCHÉE (transform: rotate(25deg)),
+     qui dépasse un peu et se fait couper (overflow: hidden sur la tuile)                  */
+
+.tuile-genre {
+  /* position: relative ; overflow: hidden ; display: block ; height ; border-radius */
+}
+
+/* .tuile-genre-titre */
+/* .tuile-genre-image → position: absolute ; right / bottom négatifs ; transform: rotate(...) */
+
+/* La grille de 2 colonnes (écrite dans la page autour des tuiles) : */
+.grille-genres {
+  /* display: grid ; grid-template-columns: 1fr 1fr ; gap: 12px */
+}

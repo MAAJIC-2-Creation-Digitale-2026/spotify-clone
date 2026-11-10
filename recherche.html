@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rechercher — Spotify (clone)</title>
+  <link rel="icon" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/page-mobile.css">
+  <link rel="stylesheet" href="css/nav-bas.css">
+  <link rel="stylesheet" href="css/barre-haut.css">
+  <link rel="stylesheet" href="css/carte.css">
+  <link rel="stylesheet" href="css/rangee.css">
+  <link rel="stylesheet" href="css/carte-artiste.css">
+  <link rel="stylesheet" href="css/ligne-titre.css">
+  <link rel="stylesheet" href="css/mini-lecteur.css">
+  <link rel="stylesheet" href="css/recherche-entete.css">
+  <link rel="stylesheet" href="css/tuile-genre.css">
+  <link rel="stylesheet" href="css/biblio-entete.css">
+  <link rel="stylesheet" href="css/element-biblio.css">
+  <link rel="stylesheet" href="css/playlist-entete.css">
+  <link rel="stylesheet" href="css/playlist-actions.css">
+  <link rel="stylesheet" href="css/connexion-form.css">
+  <link rel="stylesheet" href="css/offre-premium.css">
+  <link rel="stylesheet" href="css/menu-creer.css">
+</head>
+<body class="page">
+
+  <header class="page-haut">
+    <div data-include="components/recherche-entete.html"></div>
+  </header>
+
+  <main class="page-contenu">
+    <section>
+      <h2 class="page-titre-section">Parcourir tout</h2>
+      <div class="grille-genres">
+        <div data-include="components/tuile-genre.html" data-titre="Maloya" data-couleur="#8C3B2E" data-image="assets/img/pochettes/kabar-la-nuit.jpg"></div>
+        <div data-include="components/tuile-genre.html" data-titre="Pop" data-couleur="#2E7FA8" data-image="assets/img/pochettes/bleu-piscine.jpg"></div>
+        <div data-include="components/tuile-genre.html" data-titre="Hip-hop" data-couleur="#3A3A3A" data-image="assets/img/pochettes/basalte.jpg"></div>
+        <div data-include="components/tuile-genre.html" data-titre="Rock indé" data-couleur="#4F6B2D" data-image="assets/img/pochettes/les-fruits-du-jardin.jpg"></div>
+        <div data-include="components/tuile-genre.html" data-titre="Électro" data-couleur="#5A3D8A" data-image="assets/img/pochettes/circuits-fragiles.jpg"></div>
+        <div data-include="components/tuile-genre.html" data-titre="Folk" data-couleur="#A8803A" data-image="assets/img/pochettes/lettres-du-col.jpg"></div>
+        <div data-include="components/tuile-genre.html" data-titre="R&amp;B" data-couleur="#C9A227" data-image="assets/img/pochettes/minuit-vanille.jpg"></div>
+        <div data-include="components/tuile-genre.html" data-titre="Pour se concentrer" data-couleur="#1F6F6B" data-image="assets/img/pochettes/marees.jpg"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="page-bas">
+    <div data-include="components/mini-lecteur.html"></div>
+    <div data-include="components/nav-bas.html" data-actif="recherche"></div>
+  </div>
+
+  <script src="js/include.js" defer></script>
+  <script src="js/player.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* playlist-actions · ticket T13 — préfixe .playlist-actions
+   Mesures (téléphone 390 px) :
+     boutons-icônes gris --texte-secondaire 24 px, sans fond ni bordure, 16 px entre eux
+     bouton play : rond 56 × 56, fond vert --accent, triangle NOIR 20 px, centré
+     :hover / :active sur le play : un peu plus grand (transform: scale(1.05))           */
+
+.playlist-actions {
+  /* Flexbox : groupe de gauche … groupe de droite (justify-content: space-between) */
+}
+
+/* .playlist-actions-play */

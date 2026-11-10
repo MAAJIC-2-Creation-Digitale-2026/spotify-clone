@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibliothèque — Spotify (clone)</title>
+  <link rel="icon" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/page-mobile.css">
+  <link rel="stylesheet" href="css/nav-bas.css">
+  <link rel="stylesheet" href="css/barre-haut.css">
+  <link rel="stylesheet" href="css/carte.css">
+  <link rel="stylesheet" href="css/rangee.css">
+  <link rel="stylesheet" href="css/carte-artiste.css">
+  <link rel="stylesheet" href="css/ligne-titre.css">
+  <link rel="stylesheet" href="css/mini-lecteur.css">
+  <link rel="stylesheet" href="css/recherche-entete.css">
+  <link rel="stylesheet" href="css/tuile-genre.css">
+  <link rel="stylesheet" href="css/biblio-entete.css">
+  <link rel="stylesheet" href="css/element-biblio.css">
+  <link rel="stylesheet" href="css/playlist-entete.css">
+  <link rel="stylesheet" href="css/playlist-actions.css">
+  <link rel="stylesheet" href="css/connexion-form.css">
+  <link rel="stylesheet" href="css/offre-premium.css">
+  <link rel="stylesheet" href="css/menu-creer.css">
+</head>
+<body class="page">
+
+  <header class="page-haut">
+    <div data-include="components/biblio-entete.html"></div>
+  </header>
+
+  <main class="page-contenu">
+    <div class="page-liste">
+      <div data-include="components/element-biblio.html" data-titre="Titres likés" data-type="Playlist • Toi" data-image="assets/img/pochettes/titres-likes.jpg" data-forme="carree" data-lien="playlist.html"></div>
+      <div data-include="components/element-biblio.html" data-titre="Lova Kaz" data-type="Artiste" data-image="assets/img/artistes/lova-kaz.jpg" data-forme="ronde" data-lien="playlist.html"></div>
+      <div data-include="components/element-biblio.html" data-titre="Road trip côte Est" data-type="Playlist • Lily" data-image="assets/img/pochettes/road-trip.jpg" data-forme="carree" data-lien="playlist.html"></div>
+      <div data-include="components/element-biblio.html" data-titre="Piton Club" data-type="Artiste" data-image="assets/img/artistes/piton-club.jpg" data-forme="ronde" data-lien="playlist.html"></div>
+      <div data-include="components/element-biblio.html" data-titre="Soirée rooftop" data-type="Playlist • Samuel" data-image="assets/img/pochettes/soiree-rooftop.jpg" data-forme="carree" data-lien="playlist.html"></div>
+      <div data-include="components/element-biblio.html" data-titre="Chill du dimanche" data-type="Playlist • Spotify" data-image="assets/img/pochettes/chill-du-dimanche.jpg" data-forme="carree" data-lien="playlist.html"></div>
+      <div data-include="components/element-biblio.html" data-titre="Nayla Rivière" data-type="Artiste" data-image="assets/img/artistes/nayla-riviere.jpg" data-forme="ronde" data-lien="playlist.html"></div>
+      <div data-include="components/element-biblio.html" data-titre="Maloya &amp; co" data-type="Playlist • Spotify" data-image="assets/img/pochettes/maloya-and-co.jpg" data-forme="carree" data-lien="playlist.html"></div>
+    </div>
+  </main>
+
+  <div class="page-bas">
+    <div data-include="components/mini-lecteur.html"></div>
+    <div data-include="components/nav-bas.html" data-actif="bibliotheque"></div>
+  </div>
+
+  <script src="js/include.js" defer></script>
+  <script src="js/player.js" defer></script>
+</body>
+</html>

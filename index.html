@@ -5,43 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accueil — Spotify (clone)</title>
   <link rel="icon" href="assets/img/favicon.svg">
-
-  <!-- Icônes : Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <!-- Styles : d'abord les communs (tokens, reset, layout), puis 1 fichier par composant -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/sidebar.css">
-  <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/playlist.css">
-  <link rel="stylesheet" href="css/player.css">
-  <link rel="stylesheet" href="css/panneau.css">
-
-  <!-- Le script qui assemble les composants (defer = après le chargement du HTML) -->
-  <script src="js/include.js" defer></script>
-  <!-- Le script qui fait marcher le lecteur (attend que les composants soient chargés) -->
-  <script src="js/player.js" defer></script>
+  <link rel="stylesheet" href="css/page-mobile.css">
+  <link rel="stylesheet" href="css/nav-bas.css">
+  <link rel="stylesheet" href="css/barre-haut.css">
+  <link rel="stylesheet" href="css/carte.css">
+  <link rel="stylesheet" href="css/rangee.css">
+  <link rel="stylesheet" href="css/carte-artiste.css">
+  <link rel="stylesheet" href="css/ligne-titre.css">
+  <link rel="stylesheet" href="css/mini-lecteur.css">
+  <link rel="stylesheet" href="css/recherche-entete.css">
+  <link rel="stylesheet" href="css/tuile-genre.css">
+  <link rel="stylesheet" href="css/biblio-entete.css">
+  <link rel="stylesheet" href="css/element-biblio.css">
+  <link rel="stylesheet" href="css/playlist-entete.css">
+  <link rel="stylesheet" href="css/playlist-actions.css">
+  <link rel="stylesheet" href="css/connexion-form.css">
+  <link rel="stylesheet" href="css/offre-premium.css">
+  <link rel="stylesheet" href="css/menu-creer.css">
 </head>
-<body>
-  <!-- PAGE D'ACCUEIL : chaque <div data-include> est remplacé par son composant.
-       Seul·e le / la lead modifie ce fichier. -->
-  <div class="app">
+<body class="page">
 
-    <div data-include="components/header.html"></div>
+  <header class="page-haut">
+    <div data-include="components/barre-haut.html"></div>
+  </header>
 
-    <div data-include="components/sidebar.html"></div>
+  <main class="page-contenu">
+    <div data-include="components/rangee.html" data-titre="Conçu pour toi">
+      <div data-include="components/carte.html" data-titre="Découvertes de la semaine" data-texte="De nouveaux titres choisis pour toi, chaque lundi." data-image="assets/img/pochettes/decouvertes.jpg" data-lien="playlist.html"></div>
+      <div data-include="components/carte.html" data-titre="Focus devoirs" data-texte="De la musique sans paroles pour se concentrer." data-image="assets/img/pochettes/focus-devoirs.jpg" data-lien="playlist.html"></div>
+      <div data-include="components/carte.html" data-titre="Daily Mix 1" data-texte="Lova Kaz, Piton Club, Saphir Nwar et plus encore." data-image="assets/img/pochettes/daily-mix-1.jpg" data-lien="playlist.html"></div>
+      <div data-include="components/carte.html" data-titre="Daily Mix 2" data-texte="Les Tamarins, Isaure Delmas, Velours Mécanique et plus encore." data-image="assets/img/pochettes/daily-mix-2.jpg" data-lien="playlist.html"></div>
+      <div data-include="components/carte.html" data-titre="Radar des sorties" data-texte="Les nouveautés de tes artistes, chaque vendredi." data-image="assets/img/pochettes/radar-des-sorties.jpg" data-lien="playlist.html"></div>
+    </div>
 
-    <main class="main">
-      <div data-include="components/home.html"></div>
-    </main>
+    <section>
+      <h2 class="page-titre-section">Lancer la lecture</h2>
+      <div class="page-liste">
+        <div data-include="components/ligne-titre.html" data-titre="Ti lampé" data-artiste="Lova Kaz" data-image="assets/img/pochettes/kabar-la-nuit.jpg" data-piste="0"></div>
+        <div data-include="components/ligne-titre.html" data-titre="Bleu piscine" data-artiste="Nayla Rivière" data-image="assets/img/pochettes/bleu-piscine.jpg" data-piste="1"></div>
+        <div data-include="components/ligne-titre.html" data-titre="Coulée" data-artiste="Piton Club" data-image="assets/img/pochettes/basalte.jpg" data-piste="2"></div>
+      </div>
+    </section>
 
-    <div data-include="components/panneau.html"></div>
+    <div data-include="components/rangee.html" data-titre="Tes playlists">
+      <div data-include="components/carte.html" data-titre="Titres likés" data-texte="Tous les titres que tu as aimés." data-image="assets/img/pochettes/titres-likes.jpg" data-lien="playlist.html"></div>
+      <div data-include="components/carte.html" data-titre="Chill du dimanche" data-texte="Des titres calmes pour finir la semaine." data-image="assets/img/pochettes/chill-du-dimanche.jpg" data-lien="playlist.html"></div>
+      <div data-include="components/carte.html" data-titre="Maloya &amp; co" data-texte="Le maloya d'aujourd'hui, du kayamb aux synthés." data-image="assets/img/pochettes/maloya-and-co.jpg" data-lien="playlist.html"></div>
+      <div data-include="components/carte.html" data-titre="Road trip côte Est" data-texte="À écouter fenêtres ouvertes, de Saint-Benoît à Saint-Philippe." data-image="assets/img/pochettes/road-trip.jpg" data-lien="playlist.html"></div>
+      <div data-include="components/carte.html" data-titre="Soirée rooftop" data-texte="Pop et R&amp;B pour danser au coucher du soleil." data-image="assets/img/pochettes/soiree-rooftop.jpg" data-lien="playlist.html"></div>
+    </div>
 
-    <div data-include="components/player.html"></div>
+    <div data-include="components/rangee.html" data-titre="Artistes populaires">
+      <div data-include="components/carte-artiste.html" data-nom="Lova Kaz" data-image="assets/img/artistes/lova-kaz.jpg" data-lien="#"></div>
+      <div data-include="components/carte-artiste.html" data-nom="Nayla Rivière" data-image="assets/img/artistes/nayla-riviere.jpg" data-lien="#"></div>
+      <div data-include="components/carte-artiste.html" data-nom="Piton Club" data-image="assets/img/artistes/piton-club.jpg" data-lien="#"></div>
+      <div data-include="components/carte-artiste.html" data-nom="Les Tamarins" data-image="assets/img/artistes/les-tamarins.jpg" data-lien="#"></div>
+      <div data-include="components/carte-artiste.html" data-nom="Saphir Nwar" data-image="assets/img/artistes/saphir-nwar.jpg" data-lien="#"></div>
+      <div data-include="components/carte-artiste.html" data-nom="Velours Mécanique" data-image="assets/img/artistes/velours-mecanique.jpg" data-lien="#"></div>
+    </div>
+  </main>
 
+  <div class="page-bas">
+    <div data-include="components/mini-lecteur.html"></div>
+    <div data-include="components/nav-bas.html" data-actif="accueil"></div>
   </div>
+
+  <script src="js/include.js" defer></script>
+  <script src="js/player.js" defer></script>
 </body>
 </html>

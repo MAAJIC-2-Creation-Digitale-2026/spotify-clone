@@ -1,0 +1,13 @@
+/* element-biblio · ticket T11 — préfixe .element-biblio
+   Mesures (téléphone 390 px) :
+     image 64 × 64 · 12 px entre l'image et les textes · 8 px au-dessus et au-dessous
+     titre blanc 16 px · type gris --texte-secondaire 14 px
+     playlist : image carrée, coins 4 px · artiste : image RONDE                      */
+
+.element-biblio {
+  /* Flexbox, centré verticalement */
+}
+
+/* .element-biblio-image */
+/* .element-biblio--ronde .element-biblio-image  → border-radius: 50% */
+/* .element-biblio-textes → texte trop long → « … » */

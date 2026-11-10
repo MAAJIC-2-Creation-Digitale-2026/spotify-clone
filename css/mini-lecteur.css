@@ -1,0 +1,17 @@
+/* mini-lecteur · ticket T07 — préfixe .mini-lecteur
+   Mesures (téléphone 390 px) :
+     bandeau de ≈ 56 px de haut, marges de 8 px sur les côtés, coins arrondis 8 px
+     fond : une couleur sombre (ex. #5a3d8a), comme la pochette en cours
+     pochette 40 × 40 coins 4 px · titre blanc 14 px gras · artiste 12 px gris clair
+     bouton play à droite : icône blanche ≈ 24 px, sans fond
+     barre de progression TRÈS fine (2 px) collée en bas du bandeau                    */
+
+.mini-lecteur {
+  /* position: relative (pour poser la barre de progression en bas) ; Flexbox */
+}
+
+/* .mini-lecteur-image  */
+/* .mini-lecteur-textes → flex: 1 ; texte trop long → « … » */
+/* .mini-lecteur-play   */
+/* .mini-lecteur-progression → position: absolute ; left / right / bottom ; height: 2px
+      Bonus : accent-color: white ; ou styler ::-webkit-slider-thumb                        */

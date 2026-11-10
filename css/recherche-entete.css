@@ -1,0 +1,13 @@
+/* recherche-entete · ticket T08 — préfixe .recherche-entete
+   Mesures (téléphone 390 px) :
+     titre 24 px gras · avatar rond 32 px vert, initiale noire
+     champ : 48 px de haut, fond BLANC, texte noir 16 px, coins 6 px,
+             loupe noire à gauche (en position: absolute dans le form en position: relative)  */
+
+.recherche-entete {
+}
+
+/* ligne du titre : Flexbox, le bouton photo poussé à droite (margin-left: auto) */
+/* .recherche-entete-form   → position: relative */
+/* .recherche-entete-champ  → width: 100% ; padding à gauche pour laisser la place de la loupe */
+/* :focus-visible sur le champ : contour bien visible */

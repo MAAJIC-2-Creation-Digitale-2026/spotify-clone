@@ -1,0 +1,64 @@
+/* =====================================================================
+   page-mobile.css — la charpente des pages, version TÉLÉPHONE seulement
+   Fourni. On ne le modifie pas sans en parler au / à la lead.
+
+   Une page = 3 zones :
+     .page-haut     en haut, reste collé quand on fait défiler (barre du haut)
+     .page-contenu  le contenu qui défile
+     .page-bas      collé en bas : mini-lecteur + barre de navigation
+
+   Sur un grand écran, la page reste à la largeur d'un téléphone (480 px max.),
+   centrée : on travaille le mobile d'abord, l'ordinateur viendra après.
+   ===================================================================== */
+
+body.page {
+  max-width: 480px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--fond-page, #121212);
+  color: var(--texte-principal, #ffffff);
+  font-family: var(--police, "Figtree", "Helvetica Neue", Helvetica, Arial, sans-serif);
+}
+
+.page-haut {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--fond-page, #121212);
+  padding: 12px 16px 8px;
+}
+
+.page-contenu {
+  padding: 8px 16px 160px; /* 160 px en bas : la place du mini-lecteur + de la barre du bas */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page-bas {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Titre d'une section écrite directement dans la page (ex. « Lancer la lecture ») */
+.page-titre-section {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Une liste de composants posés les uns sous les autres */
+.page-liste {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page sans barre du bas (connexion) */
+body.page--seule .page-contenu {
+  padding-bottom: 32px;
+}

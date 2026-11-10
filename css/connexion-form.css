@@ -1,0 +1,10 @@
+/* connexion-form · ticket T14 — préfixe .connexion-form
+   Mesures (téléphone 390 px) : tout sur la largeur de l'écran, centré, 16 px entre les blocs
+     logo 40 px blanc · titre 28 px gras centré
+     labels 14 px gras · champs 48 px de haut, fond #121212, bordure 1 px #727272, coins 4 px
+     :focus-visible sur les champs : bordure blanche de 2 px
+     bouton : pilule verte --accent, texte noir gras, 48 px de haut, toute la largeur        */
+
+.connexion-form {
+  /* Flexbox en colonne + gap */
+}

@@ -1,0 +1,14 @@
+/* carte · ticket T03 — préfixe .carte
+   Mesures (téléphone 390 px) :
+     largeur ≈ 150 px (la carte ne doit PAS rétrécir dans une rangée : flex-shrink: 0)
+     pochette carrée 150 × 150 (aspect-ratio: 1 / 1 ; object-fit: cover), coins --arrondi-s (4 px)
+     titre blanc 14 px gras · texte gris --texte-secondaire 13 px, 2 lignes maximum           */
+
+.carte {
+  /* width, flex-shrink, display: block, pas de soulignement */
+}
+
+/* .carte-image  → toute la largeur de la carte, carrée */
+/* .carte-titre  → marge en haut 8 px */
+/* .carte-texte  → 2 lignes max :
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; */

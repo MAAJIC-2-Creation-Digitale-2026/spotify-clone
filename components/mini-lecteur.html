@@ -1,0 +1,33 @@
+<!--
+  COMPOSANT : mini-lecteur · ticket T07 · Le mini-lecteur au-dessus de la barre du bas
+  Maquette : le mini-lecteur de l'appli Spotify (bandeau arrondi, couleur de la pochette)
+
+  Il MARCHE grâce à js/player.js : il suffit de garder les attributs data-player.
+  ⚠ Ne supprime aucun data-player (même ceux de la partie cachée), sinon le lecteur casse.
+
+  À FAIRE : mettre en forme ce qui est déjà là (HTML fourni). L'icône play devient pause toute seule.
+  Bonus : un bouton « appareil » (fa-solid fa-mobile-screen) à gauche du bouton play.
+-->
+<div class="mini-lecteur">
+  <audio data-player="audio"></audio>
+
+  <img class="mini-lecteur-image" data-player="pochette" src="" alt="">
+  <div class="mini-lecteur-textes">
+    <p class="mini-lecteur-titre" data-player="titre">Titre du morceau</p>
+    <p class="mini-lecteur-artiste" data-player="artiste">Artiste</p>
+  </div>
+  <button class="mini-lecteur-play" data-player="play" aria-label="Lecture">
+    <i class="fa-solid fa-play" aria-hidden="true"></i>
+  </button>
+
+  <input class="mini-lecteur-progression" data-player="progression" type="range" min="0" max="100" value="0" aria-label="Progression">
+
+  <!-- Pas visible sur téléphone, mais player.js en a besoin : on la garde, cachée. -->
+  <div class="mini-lecteur-cache" hidden>
+    <button data-player="precedent" aria-label="Précédent"></button>
+    <button data-player="suivant" aria-label="Suivant"></button>
+    <span data-player="temps">0:00</span>
+    <span data-player="duree">0:00</span>
+    <input data-player="volume" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
+  </div>
+</div>

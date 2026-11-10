@@ -1,0 +1,13 @@
+/* rangee · ticket T04 — préfixe .rangee
+   Mesures (téléphone 390 px) :
+     titre 20 px gras, 12 px sous le titre
+     cartes côte à côte, 14 px entre deux cartes
+     la rangée défile à l'horizontale ; la 3e carte est coupée par le bord de l'écran   */
+
+.rangee {
+}
+
+/* .rangee-titre  → 20 px, gras */
+/* .rangee-liste  → display: flex ; gap ; overflow-x: auto
+   Bonus : cacher la barre de défilement (scrollbar-width: none)
+   Bonus : faire « s'aimanter » les cartes (scroll-snap-type / scroll-snap-align)   */

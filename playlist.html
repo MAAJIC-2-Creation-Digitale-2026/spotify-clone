@@ -3,46 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Playlist — Spotify (clone)</title>
+  <title>Titres likés — Spotify (clone)</title>
   <link rel="icon" href="assets/img/favicon.svg">
-
-  <!-- Icônes : Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <!-- Styles : d'abord les communs (tokens, reset, layout), puis 1 fichier par composant -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/sidebar.css">
-  <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/playlist.css">
-  <link rel="stylesheet" href="css/player.css">
-  <link rel="stylesheet" href="css/panneau.css">
-
-  <!-- Le script qui assemble les composants (defer = après le chargement du HTML) -->
-  <script src="js/include.js" defer></script>
-  <!-- Le script qui fait marcher le lecteur (attend que les composants soient chargés) -->
-  <script src="js/player.js" defer></script>
+  <link rel="stylesheet" href="css/page-mobile.css">
+  <link rel="stylesheet" href="css/nav-bas.css">
+  <link rel="stylesheet" href="css/barre-haut.css">
+  <link rel="stylesheet" href="css/carte.css">
+  <link rel="stylesheet" href="css/rangee.css">
+  <link rel="stylesheet" href="css/carte-artiste.css">
+  <link rel="stylesheet" href="css/ligne-titre.css">
+  <link rel="stylesheet" href="css/mini-lecteur.css">
+  <link rel="stylesheet" href="css/recherche-entete.css">
+  <link rel="stylesheet" href="css/tuile-genre.css">
+  <link rel="stylesheet" href="css/biblio-entete.css">
+  <link rel="stylesheet" href="css/element-biblio.css">
+  <link rel="stylesheet" href="css/playlist-entete.css">
+  <link rel="stylesheet" href="css/playlist-actions.css">
+  <link rel="stylesheet" href="css/connexion-form.css">
+  <link rel="stylesheet" href="css/offre-premium.css">
+  <link rel="stylesheet" href="css/menu-creer.css">
 </head>
-<body>
-  <!-- PAGE PLAYLIST : mêmes header, sidebar, panneau et lecteur que l'accueil.
-       Seul le contenu de <main> change : c'est tout l'intérêt des composants.
-       Seul·e le / la lead modifie ce fichier. -->
-  <div class="app">
+<body class="page">
 
-    <div data-include="components/header.html"></div>
+  <main class="page-contenu">
+    <div data-include="components/playlist-entete.html" data-titre="Titres likés" data-image="assets/img/pochettes/titres-likes.jpg" data-couleur="#4B3FA8" data-createur="Toi" data-infos="12 titres · 44 min"></div>
+    <div data-include="components/playlist-actions.html"></div>
+    <div class="page-liste">
+      <div data-include="components/ligne-titre.html" data-titre="Ti lampé" data-artiste="Lova Kaz" data-image="assets/img/pochettes/kabar-la-nuit.jpg" data-piste="0"></div>
+      <div data-include="components/ligne-titre.html" data-titre="Bleu piscine" data-artiste="Nayla Rivière" data-image="assets/img/pochettes/bleu-piscine.jpg" data-piste="1"></div>
+      <div data-include="components/ligne-titre.html" data-titre="Coulée" data-artiste="Piton Club" data-image="assets/img/pochettes/basalte.jpg" data-piste="2"></div>
+      <div data-include="components/ligne-titre.html" data-titre="La case en tôle" data-artiste="Les Tamarins" data-image="assets/img/pochettes/les-fruits-du-jardin.jpg" data-piste=""></div>
+      <div data-include="components/ligne-titre.html" data-titre="Tension basse" data-artiste="Velours Mécanique" data-image="assets/img/pochettes/circuits-fragiles.jpg" data-piste=""></div>
+      <div data-include="components/ligne-titre.html" data-titre="Le col des Bœufs" data-artiste="Isaure Delmas" data-image="assets/img/pochettes/lettres-du-col.jpg" data-piste=""></div>
+      <div data-include="components/ligne-titre.html" data-titre="Minuit vanille" data-artiste="Saphir Nwar" data-image="assets/img/pochettes/minuit-vanille.jpg" data-piste=""></div>
+      <div data-include="components/ligne-titre.html" data-titre="Marée haute" data-artiste="Orchestre du Lagon" data-image="assets/img/pochettes/marees.jpg" data-piste=""></div>
+    </div>
+  </main>
 
-    <div data-include="components/sidebar.html"></div>
-
-    <main class="main">
-      <div data-include="components/playlist.html"></div>
-    </main>
-
-    <div data-include="components/panneau.html"></div>
-
-    <div data-include="components/player.html"></div>
-
+  <div class="page-bas">
+    <div data-include="components/mini-lecteur.html"></div>
+    <div data-include="components/nav-bas.html" data-actif="bibliotheque"></div>
   </div>
+
+  <script src="js/include.js" defer></script>
+  <script src="js/player.js" defer></script>
 </body>
 </html>

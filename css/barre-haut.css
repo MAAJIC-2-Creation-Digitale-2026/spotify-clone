@@ -1,0 +1,14 @@
+/* barre-haut · ticket T02 — préfixe .barre-haut
+   Mesures (téléphone 390 px) :
+     avatar rond ≈ 32 px, fond vert --accent, initiale noire en gras
+     pilules ≈ 32 px de haut, fond gris foncé --fond-pilule, texte blanc 14 px, espace 8 px
+     filtre ACTIF : fond vert --accent, texte noir                                       */
+
+.barre-haut {
+  /* avatar et filtres sur UNE ligne (Flexbox), centrés verticalement */
+}
+
+/* .barre-haut-avatar          → rond : width = height + border-radius: 50% */
+/* .barre-haut-filtre          → pilule : border-radius: 999px, pas de bordure */
+/* .barre-haut-filtre--actif   → vert, texte noir */
+/* Bonus : si les filtres dépassent, ils défilent à l'horizontale (overflow-x: auto) */

@@ -1,0 +1,13 @@
+/* nav-bas · ticket T01 — préfixe .nav-bas
+   Mesures (téléphone 390 px) : hauteur ≈ 64 px · texte 11 px · 5 liens de même largeur
+   Fond : dégradé du transparent (en haut) au noir (en bas)                         */
+
+.nav-bas {
+  /* le fond en dégradé : linear-gradient(...) */
+}
+
+/* .nav-bas ul        → Flexbox, 5 colonnes de même largeur, list-style: none */
+/* .nav-bas-lien      → icône AU-DESSUS du texte (flex-direction: column), gris, centré */
+/* .nav-bas-texte     → 11 px */
+/* Lien de la page en cours : blanc. Indice : sélecteur d'attribut
+   .nav-bas[data-actif="accueil"] .nav-bas-lien--accueil { ... }                        */

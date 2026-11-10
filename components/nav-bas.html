@@ -1,0 +1,19 @@
+<!--
+  COMPOSANT : nav-bas · ticket T01 · Barre de navigation du bas
+  Maquette : telephone/01-sidebar.png et 04-bibliotheque-page-entiere.png (tout en bas)
+
+  Trou à remplir par la page :
+    {{actif}}  → le nom de la page en cours : accueil, recherche, bibliotheque, premium
+
+  À FAIRE : à l'intérieur de <nav>, une liste <ul> de 5 liens.
+  Chaque <li> contient un <a class="nav-bas-lien"> avec :
+     une icône Font Awesome <i class="fa-solid fa-house" aria-hidden="true"></i>
+     un texte <span class="nav-bas-texte">Accueil</span>
+  Les 5 liens : Accueil (index.html) · Rechercher (recherche.html) · Bibliothèque (bibliotheque.html)
+                · Premium (premium.html) · Créer (#)
+  Icônes conseillées : fa-house · fa-magnifying-glass · fa-lines-leaning · fa-spotify (fa-brands) · fa-plus
+-->
+<nav class="nav-bas" data-actif="{{actif}}" aria-label="Navigation principale">
+  <!-- ton HTML ici -->
+  nav-bas (T01) — page active : {{actif}}
+</nav>

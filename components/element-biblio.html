@@ -1,0 +1,18 @@
+<!--
+  COMPOSANT : element-biblio · ticket T11 · Un élément de la liste de la Bibliothèque
+  Maquette : telephone/04-bibliotheque-page-entiere.png
+
+  Trous : {{image}} pochette ou photo · {{titre}} nom · {{type}} ex. « Playlist • Lily » ou « Artiste »
+          {{forme}} carree (playlist) ou ronde (artiste) · {{lien}} page où il mène
+
+  À FAIRE : à l'intérieur de <a class="element-biblio">
+    <img class="element-biblio-image" src="{{image}}" alt="">
+    <div class="element-biblio-textes">
+      <p class="element-biblio-titre">{{titre}}</p>
+      <p class="element-biblio-type">{{type}}</p>
+    </div>
+-->
+<a class="element-biblio element-biblio--{{forme}}" href="{{lien}}">
+  <!-- ton HTML ici -->
+  element-biblio (T11) : {{titre}} — {{type}}
+</a>

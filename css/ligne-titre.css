@@ -1,0 +1,15 @@
+/* ligne-titre · ticket T06 — préfixe .ligne-titre
+   Mesures (téléphone 390 px) :
+     hauteur de ligne ≈ 56 px · pochette 48 × 48 · 12 px entre la pochette et les textes
+     titre blanc 16 px · artiste gris --texte-secondaire 14 px
+     bouton « ⋮ » tout à droite, gris, sans fond ni bordure                            */
+
+.ligne-titre {
+  /* Flexbox : pochette | textes (prennent toute la place : flex: 1) | bouton */
+}
+
+/* .ligne-titre-image   */
+/* .ligne-titre-textes  → titre et artiste l'un sous l'autre ; texte trop long → « … »
+      (white-space: nowrap ; overflow: hidden ; text-overflow: ellipsis ; min-width: 0)  */
+/* .ligne-titre-plus    */
+/* :hover / :active sur la ligne : fond --fond-actif, coins arrondis */

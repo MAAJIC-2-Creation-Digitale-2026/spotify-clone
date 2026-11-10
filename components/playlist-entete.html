@@ -1,0 +1,19 @@
+<!--
+  COMPOSANT : playlist-entete · ticket T12 · Haut de la page playlist
+  Maquette : la page d'une playlist dans l'appli (pochette centrée sur un fond en dégradé)
+
+  Trous : {{image}} pochette · {{titre}} nom de la playlist · {{couleur}} couleur du dégradé
+          {{createur}} qui l'a créée · {{infos}} ex. « 12 titres · 44 min »
+
+  À FAIRE : à l'intérieur de <header class="playlist-entete">
+    un bouton retour (fa-solid fa-arrow-left, aria-label="Retour") qui est un lien vers index.html
+    <img class="playlist-entete-image" src="{{image}}" alt="">
+    <h1 class="playlist-entete-titre">{{titre}}</h1>
+    <p class="playlist-entete-createur">{{createur}}</p>
+    <p class="playlist-entete-infos">{{infos}}</p>
+  La variable --couleur est déjà posée par l'attribut style : sers-t'en dans le dégradé.
+-->
+<header class="playlist-entete" style="--couleur: {{couleur}}">
+  <!-- ton HTML ici -->
+  playlist-entete (T12) : {{titre}}
+</header>

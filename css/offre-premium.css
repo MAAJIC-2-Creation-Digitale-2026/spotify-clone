@@ -1,0 +1,9 @@
+/* offre-premium · ticket T15 — préfixe .offre-premium
+   Mesures (téléphone 390 px) :
+     carte fond #242424, coins 8 px, padding 16 px, 16 px entre deux cartes
+     nom 24 px gras, de la couleur var(--couleur) · prix 14 px
+     avantages : liste à puces simples, 14 px, trait fin gris au-dessus
+     bouton : pilule de la couleur var(--couleur), texte noir gras, toute la largeur          */
+
+.offre-premium {
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium — Spotify (clone)</title>
+  <link rel="icon" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/page-mobile.css">
+  <link rel="stylesheet" href="css/nav-bas.css">
+  <link rel="stylesheet" href="css/barre-haut.css">
+  <link rel="stylesheet" href="css/carte.css">
+  <link rel="stylesheet" href="css/rangee.css">
+  <link rel="stylesheet" href="css/carte-artiste.css">
+  <link rel="stylesheet" href="css/ligne-titre.css">
+  <link rel="stylesheet" href="css/mini-lecteur.css">
+  <link rel="stylesheet" href="css/recherche-entete.css">
+  <link rel="stylesheet" href="css/tuile-genre.css">
+  <link rel="stylesheet" href="css/biblio-entete.css">
+  <link rel="stylesheet" href="css/element-biblio.css">
+  <link rel="stylesheet" href="css/playlist-entete.css">
+  <link rel="stylesheet" href="css/playlist-actions.css">
+  <link rel="stylesheet" href="css/connexion-form.css">
+  <link rel="stylesheet" href="css/offre-premium.css">
+  <link rel="stylesheet" href="css/menu-creer.css">
+</head>
+<body class="page">
+
+  <main class="page-contenu">
+    <h1 class="page-titre-section" style="font-size:28px">Essayez 1 mois de Premium</h1>
+    <div data-include="components/offre-premium.html" data-nom="Individuel" data-prix="10,99 € par mois" data-couleur="#ffd2d7">
+      <li>1 compte Premium</li>
+      <li>Écoute sans pub</li>
+      <li>Téléchargement des titres</li>
+    </div>
+    <div data-include="components/offre-premium.html" data-nom="Étudiants" data-prix="5,99 € par mois" data-couleur="#c4b1d4">
+      <li>1 compte Premium vérifié</li>
+      <li>Réduction pour les étudiants</li>
+      <li>Écoute sans pub</li>
+    </div>
+  </main>
+
+  <div class="page-bas">
+    <div data-include="components/mini-lecteur.html"></div>
+    <div data-include="components/nav-bas.html" data-actif="premium"></div>
+  </div>
+
+  <script src="js/include.js" defer></script>
+  <script src="js/player.js" defer></script>
+</body>
+</html>

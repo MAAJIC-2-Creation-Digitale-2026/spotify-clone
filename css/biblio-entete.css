@@ -1,0 +1,13 @@
+/* biblio-entete · ticket T10 — préfixe .biblio-entete
+   Mesures (téléphone 390 px) :
+     titre 24 px gras · avatar rond 32 px vert, initiale noire
+     boutons-icônes blancs ≈ 24 px, sans fond
+     pilules 32 px de haut, fond --fond-pilule, texte 14 px, bordure 1 px grise, espace 8 px
+     ligne « Récents » : texte 14 px, 16 px au-dessus                                     */
+
+.biblio-entete {
+  /* les 3 lignes l'une sous l'autre : Flexbox en colonne + gap */
+}
+
+/* .biblio-entete-titre */
+/* .biblio-entete-filtre */

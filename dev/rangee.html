@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="../">
+  <title>Bac à sable — rangee (T04)</title>
+  <link rel="icon" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bac-a-sable.css">
+  <link rel="stylesheet" href="css/carte.css">
+  <link rel="stylesheet" href="css/carte-artiste.css">
+  <link rel="stylesheet" href="css/rangee.css">
+</head>
+<body class="bac-a-sable">
+
+  <p class="bac-a-sable-titre"><strong>T04 · Rangée de cartes qui défile</strong> · composant <code>components/rangee.html</code> + <code>css/rangee.css</code> · <a href="dev/index.html">tous les composants</a></p>
+  <p class="bac-a-sable-aide">Bac à sable : ton composant tout seul, dans un cadre de 390 px (un téléphone). Il est aussi posé dans : index.html. Ce fichier sert à tester, on n'y écrit pas le composant.</p>
+
+  <div class="bac-a-sable-cadre">
+    <div data-include="components/rangee.html" data-titre="Conçu pour toi">
+      <div data-include="components/carte.html" data-titre="Découvertes de la semaine" data-texte="De nouveaux titres choisis pour toi, chaque lundi." data-image="assets/img/pochettes/decouvertes.jpg" data-lien="playlist.html"></div>
+      <div data-include="components/carte.html" data-titre="Focus devoirs" data-texte="De la musique sans paroles pour se concentrer." data-image="assets/img/pochettes/focus-devoirs.jpg" data-lien="playlist.html"></div>
+      <div data-include="components/carte.html" data-titre="Daily Mix 1" data-texte="Lova Kaz, Piton Club, Saphir Nwar et plus encore." data-image="assets/img/pochettes/daily-mix-1.jpg" data-lien="playlist.html"></div>
+      <div data-include="components/carte.html" data-titre="Daily Mix 2" data-texte="Les Tamarins, Isaure Delmas, Velours Mécanique et plus encore." data-image="assets/img/pochettes/daily-mix-2.jpg" data-lien="playlist.html"></div>
+      <div data-include="components/carte.html" data-titre="Radar des sorties" data-texte="Les nouveautés de tes artistes, chaque vendredi." data-image="assets/img/pochettes/radar-des-sorties.jpg" data-lien="playlist.html"></div>
+    </div>
+  </div>
+
+  <script src="js/include.js" defer></script>
+  <script src="js/player.js" defer></script>
+</body>
+</html>
