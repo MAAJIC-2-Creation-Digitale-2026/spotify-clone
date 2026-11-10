@@ -52,8 +52,8 @@ Trou spécial : `{{contenu}}` reçoit **ce que la page a écrit entre les balise
 
 ## 3. Ma façon de travailler, pas à pas
 
-1. **Je choisis un ticket** au daily (post-it sur le tableau) : un seul à la fois.
-2. **Je crée l'issue** sur GitHub : onglet *Issues* → *New issue* → je copie le ticket depuis `BACKLOG.md` → je m'assigne (*Assignees*).
+1. **Je choisis un ticket** au daily (post-it sur le tableau) : un seul à la fois. Les tickets sont les **issues GitHub #9 à #24** (T01 à T16). Pour aujourd'hui, on commence par T01, T02, T03, T06 et T07.
+2. **Je m'assigne l'issue** sur GitHub : onglet *Issues* → j'ouvre mon ticket → *Assignees* → *Assign yourself*. Une issue déjà assignée à quelqu'un est prise.
 3. **Je crée ma branche** dans VS Code (panneau Git, en bas à gauche : *main* → *Create new branch*) : `t03-carte` (numéro du ticket + nom du composant).
 4. **J'ouvre mon bac à sable** : clic droit sur `dev/carte.html` → *Open with Live Server*. Puis F12 → mode appareil → largeur **390**.
 5. **Je code** dans `components/carte.html` et `css/carte.css`. J'enregistre → le bac à sable se recharge.
