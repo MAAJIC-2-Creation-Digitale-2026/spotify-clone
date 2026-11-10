@@ -13,16 +13,24 @@
 
   <img class="mini-lecteur-image" data-player="pochette" src="" alt="">
   <div class="mini-lecteur-textes">
-    <p class="mini-lecteur-titre" data-player="titre">Titre du morceau</p>
-    <p class="mini-lecteur-artiste" data-player="artiste">Artiste</p>
+    <p class="mini-lecteur-titre" data-player="titre"></p>
+    <p class="mini-lecteur-artiste" data-player="artiste"></p>
   </div>
-  <button class="mini-lecteur-play" data-player="play" aria-label="Lecture">
-    <i class="fa-solid fa-play" aria-hidden="true"></i>
-  </button>
+
+  <div class="mini-lecteur-actions">
+    <button class="mini-lecteur-btn" aria-label="Appareils disponibles">
+      <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+    </button>
+    <button class="mini-lecteur-btn" aria-label="Ajouter aux favoris">
+      <i class="fa-solid fa-plus" aria-hidden="true"></i>
+    </button>
+    <button class="mini-lecteur-play" data-player="play" aria-label="Lecture">
+      <i class="fa-solid fa-play" aria-hidden="true"></i>
+    </button>
+  </div>
 
   <input class="mini-lecteur-progression" data-player="progression" type="range" min="0" max="100" value="0" aria-label="Progression">
 
-  <!-- Pas visible sur téléphone, mais player.js en a besoin : on la garde, cachée. -->
   <div class="mini-lecteur-cache" hidden>
     <button data-player="precedent" aria-label="Précédent"></button>
     <button data-player="suivant" aria-label="Suivant"></button>

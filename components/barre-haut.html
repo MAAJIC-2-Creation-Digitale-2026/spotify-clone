@@ -14,7 +14,7 @@
         <img src="https://picsum.photos/300" alt="Photo de profil" class="header-avatar-img">
         </a>
         <nav class="header-nav-chips" aria-label="Filtres de contenu">
-        <button class="header-chip active">Tout</button>
+        <button class="header-chip active" aria-pressed="true">Tout</button>
         <button class="header-chip">Musique</button>
         <button class="header-chip">Podcasts</button>
         <button class="header-chip">Livres audio</button>
@@ -74,10 +74,12 @@
             </a>
 
             <!-- Icône Utilisateur Connecté -->
-            <a href="#" class="header-user-profile-btn" aria-label="Profil">
-            <!-- TODO : remplacer l'icône par une vraie photo de profil (avatar) -->
-            <img src="https://picsum.photos/300" alt="Photo de profil" class="header-avatar-img">
-            </a>
+            <button popovertarget="menu-profil" aria-label="Ouvrir le menu du profil">
+              <a href="#" class="header-user-profile-btn" aria-label="Profil">
+              <!-- TODO : remplacer l'icône par une vraie photo de profil (avatar) -->
+              <img src="https://picsum.photos/300" alt="Photo de profil" class="header-avatar-img">
+              </a>
+            </button>
         </div>
     </div>
 </div>
