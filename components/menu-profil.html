@@ -7,14 +7,14 @@
      ---------------------------------------------------------
      À construire : carte du profil · « Ajouter un compte » · 4 liens avec icônes ·
                     2 boutons ronds (Activité, Inviter des amis) · bloc « Messages »
-     Responsive   : téléphone (base) : tiroir collé à gauche, ≈ 84 % de large, toute la hauteur
-                    à partir de 768px : petit menu déroulant en haut à droite, sous l'avatar, sans « Messages »
+     Version      : TÉLÉPHONE seulement pour l'instant (390 px) : tiroir collé à gauche,
+                    ≈ 84 % de large, toute la hauteur. L'ordinateur viendra après.
      Notions      : attribut popover, ::backdrop, position, Flexbox, listes, icônes Font Awesome
      ---------------------------------------------------------
      Comment il s'ouvre (sans JavaScript) :
      - ce composant a l'attribut popover : il est caché tant qu'on ne l'ouvre pas
      - n'importe quel bouton avec popovertarget="menu-profil" l'ouvre et le ferme
-       (dans le site : le bouton avatar du header, ajouté par le / la lead ;
+       (dans le site : le bouton avatar des composants barre-haut, recherche-entete et biblio-entete ;
         dans le bac à sable : le bouton de test)
      - un clic en dehors, ou la touche Échap, le referme tout seul
      ---------------------------------------------------------
