@@ -5,9 +5,40 @@
      titre blanc 14 px gras · texte gris --texte-secondaire 13 px, 2 lignes maximum           */
 
 .carte {
-  /* width, flex-shrink, display: block, pas de soulignement */
+  width: 150px;
+  display: flex;
+  flex-direction: column;
 }
-
+.carte__pochette{
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1 ; 
+    object-fit: cover ;
+    width:150px;
+    height:150px;
+    background-color: #f7f4f4;
+    border-radius: var(--arrondi-s);
+}
+.carte__image{
+   width: 100%;
+   height: 100%;
+   border-radius: var(--arrondi-s);
+}
+.carte__titre{
+   position: absolute;
+   bottom: 0;
+   left: 8px;
+}
+.carte__texte{
+   margin-top: var(--espace-2);
+   font-size: var(--taille-xs);
+   color: var(--texte-secondaire);
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+}
 /* .carte-image  → toute la largeur de la carte, carrée */
 /* .carte-titre  → marge en haut 8 px */
 /* .carte-texte  → 2 lignes max :
