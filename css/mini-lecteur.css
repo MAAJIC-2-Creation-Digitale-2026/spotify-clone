@@ -7,21 +7,23 @@
      barre de progression TRÈS fine (2 px) collée en bas du bandeau                    */
 
      /* Conteneur principal */
+
+/* TODO : les icone dans le coin ne sont pas center il faut le changer */
 .mini-lecteur {
   position: fixed;
   bottom: 64px;
-  left: 8px;
-  right: 8px;
-  height: 56px;
-  background-color: #18454f;
-  border-radius: 8px;
+  left: var(--espace-2);
+  right: var(--espace-2);
+  height: var(--taille-bouton-play);
+  background-color: #ff00ff;
+  border-radius: var(--arrondi-m);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 8px;
+  padding: 0 var(--espace-2);
   box-sizing: border-box;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 var(--espace-1) var(--espace-3) rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
@@ -29,7 +31,7 @@
 .mini-lecteur-image {
   width: 40px;
   height: 40px;
-  border-radius: 4px;
+  border-radius: var(--arrondi-s);
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -46,8 +48,8 @@
 .mini-lecteur-titre {
   margin: 0;
   color: var(--texte-principal);
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--taille-s);
+  font-weight: var(--graisse-forte);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -56,7 +58,7 @@
 .mini-lecteur-artiste {
   margin: 0;
   color: var(--texte-secondaire);
-  font-size: 12px;
+  font-size: var(--taille-xs);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -66,14 +68,14 @@
 .mini-lecteur-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: var(--espace-3);
   flex-shrink: 0;
 }
 
 i {
   pointer-events: none; /* pour que le clic sur l'icône déclenche le bouton parent */
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .mini-lecteur-btn,
@@ -81,7 +83,7 @@ i {
   background: transparent;
   border: none;
   color: var(--texte-principal);
-  font-size: 18px;
+  font-size: var(--taille-m);
   cursor: pointer;
   padding: 0;
   display: flex;
@@ -89,16 +91,12 @@ i {
   justify-content: center;
 }
 
-.mini-lecteur-play {
-  font-size: 20px;
-}
-
 /* --- BARRE DE PROGRESSION --- */
 .mini-lecteur-progression {
   position: absolute;
   bottom: 0;
-  left: 8px;
-  right: 8px;
+  left: var(--espace-2);
+  right: var(--espace-2);
   width: calc(100% - 16px);
   height: 2px;
   margin: 0;
