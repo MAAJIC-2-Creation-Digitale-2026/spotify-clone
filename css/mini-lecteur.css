@@ -68,11 +68,13 @@
 .mini-lecteur-actions {
   display: flex;
   align-items: center;
-  gap: var(--espace-3);
+  position: relative;
+  left: -8px;
+  gap: var(--espace-6);
   flex-shrink: 0;
 }
 
-i {
+.fa-mobile-screen .fa-plus .fa-play{
   pointer-events: none; /* pour que le clic sur l'icône déclenche le bouton parent */
   width: 24px;
   height: 24px;
