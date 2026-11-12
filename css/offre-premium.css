@@ -5,66 +5,20 @@
      avantages : liste à puces simples, 14 px, trait fin gris au-dessus
      bouton : pilule de la couleur var(--couleur), texte noir gras, toute la largeur          */
 
-:root {
-  --bg-page: #121212;
-  --bg-card: #1f1f1f;
-  --border-card: #2e2e2e;
-  --text-main: #ffffff;
-  --text-muted: #b3b3b3;
-
-  /* Couleurs spécifiques aux offres Spotify */
-  --color-personnel: #1ed760;
-  --color-etudiants: #9bf0e1;
-  --color-duo: #ffa463;
-  --color-famille: #e3a8f7;
-}
-
 
 /* --- CARTES --- */
 .premium-card {
   position: relative;
-  background-color: var(--bg-card);
-  border-radius: 8px;
+  background-color: #242424;
+  border-radius: var(--arrondi-m);
   padding: 20px 16px;
   overflow: hidden;
 }
 
-.premium-card-subtitle {
-  font-size: 16px;
-  font-weight: 700;
-  margin: 0 0 14px 0;
-}
-
 .premium-divider {
   border: none;
-  border-top: 1px solid var(--border-card);
+  border-top: 1px solid #545454;
   margin: 14px 0;
-}
-
-/* --- LISTE AVANTAGES --- */
-.premium-benefits-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.premium-benefits-list li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 13px;
-  line-height: 1.3;
-}
-
-.premium-benefits-list i {
-  width: 20px;
-  text-align: center;
-  font-size: 15px;
-  color: var(--text-main);
-  flex-shrink: 0;
 }
 
 /* --- RUBAN D'OFFRE (0 € pour 1 mois) --- */
@@ -72,77 +26,84 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 5px 12px;
-  font-size: 11px;
-  font-weight: 700;
-  color: #000000;
-  border-bottom-right-radius: 8px;
+  padding: 4px 14px;
+  font-size: var(--taille-xs);
+  font-weight: var(--graisse-forte);
+  color: var(--texte-sur-clair);
+  border-bottom-right-radius: var(--arrondi-m);
+  background-color: var(--couleur);
 }
 
-.premium-ribbon--personnel { background-color: var(--color-personnel); }
-.premium-ribbon--etudiants { background-color: var(--color-etudiants); }
 
 /* Décalage du header interne quand un ruban est présent */
 .premium-ribbon + .premium-plan-header {
   margin-top: 18px;
 }
 
+/* 1. Masque le ruban s'il ne contient aucun texte ({{essai}} vide), c'est fou carrement*/
+.premium-ribbon:empty {
+  display: none;
+}
+
+/* 2. Remonte le header en annulant le décalage quand le ruban est vide */
+.premium-ribbon:empty + .premium-plan-header {
+  margin-top: 0;
+}
+
 /* --- DÉTAILS DES OFFRES --- */
 .premium-plan-brand {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 12px;
-  font-weight: 700;
-  margin-bottom: 6px;
+  gap: var(--espace-1);
+  font-size: var(--taille-xs);
+  font-weight: var(--graisse-forte);
+  margin-bottom: var(--espace-2);
 }
+
 
 .offre-premium-nom {
-  font-weight: 700;
+  font-weight: var(--graisse-forte);
+  font-size: var(--taille-l);
   margin: 0 0 6px 0;
+  color: var(--couleur);
 }
 
-.text-personnel { color: var(--color-personnel); }
-.text-etudiants { color: var(--color-etudiants); }
-.text-duo { color: var(--color-duo); }
-.text-famille { color: var(--color-famille); }
-
 .offre-premium-prix {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--taille-s);
+  font-weight: var(--graisse-forte);
   margin: 0;
 }
 
 .premium-plan-subprice {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin: 2px 0 0 0;
+  font-size: var(--taille-xs);
+  color: var(--texte-secondaire);
 }
 
 .offre-premium-avantages {
   padding-left: 18px;
+  line-height: 1.4;
   margin: 0 0 20px 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  font-weight: var(--graisse-moyenne);
 }
 
 .offre-premium-avantages li {
-  font-size: 13px;
-  line-height: 1.4;
+  font-size: var(--taille-s);
 }
 
 /* --- BOUTONS D'ACTION (CTA) --- */
 .premium-cta {
   width: 100%;
-  height: 48px;
+  height: var(--hauteur-champ);
   border: none;
-  border-radius: 500px;
-  color: #000000;
-  font-size: 14px;
-  font-weight: 700;
+  border-radius: var(--arrondi-rond);
+  color: var(--texte-sur-clair);
+  font-size: var(--taille-s);
+  font-weight: var(--graisse-forte);
   cursor: pointer;
   transition: transform 0.1s ease, filter 0.2s ease;
+  background-color: var(--couleur);
 }
 
 .premium-cta:hover {
@@ -154,20 +115,13 @@
   transform: scale(0.98);
 }
 
-.premium-cta--personnel { background-color: var(--color-personnel); }
-.premium-cta--etudiants { background-color: var(--color-etudiants); }
-.premium-cta--duo { background-color: var(--color-duo); }
-.premium-cta--famille { background-color: var(--color-famille); }
 
 /* --- MENTIONS LÉGALES --- */
 .premium-legal {
   font-size: 10px;
-  line-height: 1.4;
-  color: var(--text-muted);
+  line-height: 1.2;
+  font-weight: var(--graisse-moyenne);
+  color: var(--texte-secondaire);
   margin: 12px 0 0 0;
-}
-
-.premium-legal.center {
   text-align: center;
 }
-

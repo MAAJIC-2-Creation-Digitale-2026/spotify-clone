@@ -15,7 +15,7 @@
   left: var(--espace-2);
   right: var(--espace-2);
   height: var(--taille-bouton-play);
-  background-color: #ff00ff;
+  background-color: #5a3d8a;
   border-radius: var(--arrondi-m);
   display: flex;
   align-items: center;
@@ -72,12 +72,6 @@
   left: -8px;
   gap: var(--espace-6);
   flex-shrink: 0;
-}
-
-.fa-mobile-screen .fa-plus .fa-play{
-  pointer-events: none; /* pour que le clic sur l'icône déclenche le bouton parent */
-  width: 24px;
-  height: 24px;
 }
 
 .mini-lecteur-btn,
