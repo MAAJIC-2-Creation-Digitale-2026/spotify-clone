@@ -8,20 +8,4 @@
    - on ne touche pas aux fichiers des autres
    ========================================================= */
 
-.sidebar {
-  /* tes styles ici */
-}
 
-
-/* MOBILE D'ABORD : les styles ci-dessus sont pour le téléphone.
-   On ajoute dessous ce qui change sur les écrans plus larges. */
-
-/* ---------- Tablette (à partir de 768px) ---------- */
-@media (min-width: 768px) {
-
-}
-
-/* ---------- Ordinateur (à partir de 1024px) ---------- */
-@media (min-width: 1024px) {
-
-}

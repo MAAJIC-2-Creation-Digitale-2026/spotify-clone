@@ -3,13 +3,35 @@
   Maquette : telephone/04-bibliotheque-page-entiere.png (en haut)
 
   À FAIRE : à l'intérieur de <div class="biblio-entete">
-    1. une ligne : avatar rond (A) + <h1 class="biblio-entete-titre">Bibliothèque</h1>
+    1. une ligne : avatar <button class="biblio-entete-avatar" popovertarget="menu-profil" aria-label="Ouvrir le menu du profil">A</button>
+       (popovertarget ouvre le menu du profil, ticket #8)
+       + <h1 class="biblio-entete-titre">Bibliothèque</h1>
        + à droite 2 boutons-icônes : loupe (fa-magnifying-glass) et plus (fa-plus), avec aria-label
     2. une ligne de filtres en pilules : <button class="biblio-entete-filtre"> Playlists · Artistes
     3. une ligne « Récents » : à gauche un bouton tri (fa-arrow-down-wide-short + « Récents »),
        à droite un bouton d'affichage en grille (fa-table-cells-large, aria-label="Afficher en grille")
 -->
 <div class="biblio-entete">
-  <!-- ton HTML ici -->
-  biblio-entete (T10)
+   <div class="ligne-une">
+    <h1 class="avatar" > A </h1>
+    <h1>Bibliothèque</h1>
+    <i class="fi fi-tr-search"></i>
+    <i class="fi fi-rr-plus"></i>
+
+   </div>
+
+   <div class="ligne-deux">
+    <p class="pillules" >Playlists</p>
+    <p class="pillules">Album</p>
+    <p class="pillules">Artistes</p>
+    
+   </div>
+
+   <div class="ligne-trois">
+    <p>Titres</p>
+    
+   </div>
+
+
+
 </div>
