@@ -5,9 +5,45 @@
      playlist : image carrée, coins 4 px · artiste : image RONDE                      */
 
 .element-biblio {
-  /* Flexbox, centré verticalement */
+  display: flex;
+  padding: 8px 0;
 }
 
+.element-biblio-image{
+  width: 64px;
+  height: 64px;
+  border-radius: var(--arrondi-s);
+  margin-right: 12px;
+}
+.element-biblio-image-artiste{
+  width: 64px;
+  height: 64px;
+  border-radius: var(--arrondi-rond);
+  margin-right: 12px;
+}
+.element-biblio--ronde {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--arrondi-rond);
+  margin-right: 12px;
+}
+.element-biblio-textes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;  /* pour que le texte trop long soit tronqué par « … » */
+}
+.element-biblio-titre {
+  font-size: var(--taille-m);
+  font-weight: var(--graisse-moyenne);
+  color: var(--texte-principal);
+  margin: 0;
+}
+.element-biblio-type {
+  font-size: var(--taille-s);
+  color: var(--texte-secondaire);
+  margin: 0;
+}
 /* .element-biblio-image */
 /* .element-biblio--ronde .element-biblio-image  → border-radius: 50% */
 /* .element-biblio-textes → texte trop long → « … » */
