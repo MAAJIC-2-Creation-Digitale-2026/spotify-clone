@@ -30,11 +30,11 @@
    font-size: 11px;
    color: var(--texte-secondaire);
 }
-i{
+.icon-navbar{
    font-size: 20px;
    color: var(--texte-secondaire);
 }
-i:active{
+.icon-navbar:active{
    color: var(--texte-principal);
 }
 
