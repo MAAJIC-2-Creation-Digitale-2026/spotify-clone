@@ -16,6 +16,112 @@
    pour passer devant le dégradé.                                                        */
 
 .premium-entete {
+  background-color: var(--fond-page);
+  color: var(--texte-principal);
+  padding-bottom: var(--espace-4);
+}
+
+/* Zone photo + dégradé (sort du padding parent) */
+.premium-entete-visuel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 320px;
+  
+  /* 1. Annule le padding du conteneur parent (8px en haut, 16px sur les côtés) */
+  margin: -8px -16px 16px -16px;
+  
+  /* 2. Restaure l'espacement interne pour que le texte et le logo restent bien alignés */
+  padding: 20px 16px 0 16px;
+  
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Dégradé noir par-dessus l'image vers le bas */
+.premium-entete-visuel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient( to bottom,rgba(10, 10, 10, 0.1) 0%,rgba(10, 10, 10, 0.7) 50%, var(--fond-page) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Image en arrière-plan */
+.premium-entete-image {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  max-width: 200%;
+  max-height: 200%;
+  top:-20px;
+  left:-20px;
+  object-fit: cover;
+  z-index: 0;
+  inset: 0;
+}
+
+/* Étiquette Spotify Premium (au-dessus du dégradé) */
+.premium-entete-etiquette {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espace-1);
+  margin: 0 0 var(--espace-8) 0;
+  font-size: var(--taille-xs);
+  font-weight: var(--graisse-forte);
+  color: var(--accent);
+}
+
+.premium-entete-etiquette i {
+  color: var(--accent);
+  font-size: 18px;
+}
+
+/* Titre principal */
+.premium-entete-titre {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  font-size: var(--taille-l);
+  font-weight: var(--graisse-forte);
+  line-height: 1.1;
+}
+
+/* Bouton pilule vert */
+.premium-entete-bouton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--hauteur-champ);
+  background-color: var(--accent);
+  color: var(--texte-sur-clair);
+  text-decoration: none;
+  font-size: var(--taille-m);
+  font-weight: var(--graisse-forte);
+  border-radius: var(--arrondi-rond);
+  transition: transform 0.1s ease, filter 0.2s ease;
+}
+
+.premium-entete-bouton:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+.premium-entete-bouton:active {
+  transform: scale(0.98);
+}
+
+/* Mentions légales en dessous du bouton */
+.premium-entete-conditions {
+  margin: var(--espace-4) 0 0;
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--texte-secondaire);
+  font-weight: var(--graisse-forte);
 }
 
 /* .premium-entete-visuel → position: relative ; margin: 0 -16px ; height ; display: flex (texte en bas) */
