@@ -13,6 +13,7 @@
   gap: var(--espace-4);
   justify-content: center;
   text-align: center;
+  padding: var(--espace-4);
 }
 .logo{
   font-size: 40px;
