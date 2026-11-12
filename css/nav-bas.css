@@ -26,7 +26,7 @@
    font-size: 11px;
    flex: 1; /* chaque lien prend la même largeur */
 }
-.nav-bas__texte {
+.nav-bas-texte {
    font-size: 11px;
    color: var(--texte-secondaire);
 }
