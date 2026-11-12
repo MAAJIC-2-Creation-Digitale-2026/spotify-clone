@@ -9,5 +9,36 @@
   /* les 3 lignes l'une sous l'autre : Flexbox en colonne + gap */
 }
 
+.ligne-une {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ligne-deux{
+  display: flex;
+  justify-content: baseline;
+  
+}
+
+.avatar{
+  
+  color: black;
+  background-color: #1ed760;
+  border-radius:20px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+}
+
+.pillules{
+  margin-right: 10px;
+color: white;
+background-color:rgba(255, 255, 255, 0.07);
+padding-left: 5px;
+padding-right: 5px;
+border-radius: 20px;
+
+}
+
 /* .biblio-entete-titre */
 /* .biblio-entete-filtre */
