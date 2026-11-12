@@ -3,10 +3,10 @@
 Projet d'équipe du module HTML/CSS : on reproduit **open.spotify.com** tel quel, en équipe, chacun·e son composant.
 5 jours : jeu. 05/11 · mar. 10/11 · jeu. 12/11 · ven. 13/11 · mar. 17/11. **Rendu le mar. 17/11 à 12h00.**
 
-- 🎨 **Maquette** (captures ordinateur et téléphone + relevés des mesures) : [dossier Drive, en lecture seule](https://drive.google.com/drive/folders/17HLtT-RKTaBV5tGGkyPMQKInZ43wElMk) — les noms de captures cités dans les issues (`01-accueil-haut`…) sont dans les sous-dossiers `desktop/` et `telephone/`. Le fichier Figma avec la page « Guide de style » remplacera ce lien.
+- 🎨 **Maquette** (captures ordinateur et téléphone + relevés des mesures) : [dossier Drive, en lecture seule](https://drive.google.com/drive/folders/1q3Pfz3PSOS1WhFYyj4tlRrnC5-3T3SIn?usp=sharing) — les noms de captures cités dans les issues (`01-accueil-haut`…) sont dans les sous-dossiers `desktop/` et `telephone/`.
 - 🌐 **Site en ligne** (GitHub Pages) : https://maajic-2-creation-digitale-2026.github.io/spotify-clone/
 - ✅ **Tes tâches** : [onglet Issues](https://github.com/MAAJIC-2-Creation-Digitale-2026/spotify-clone/issues), une issue par composant avec sa checklist
-- 📋 **Le contenu commun** (artistes, titres, playlists, noms de fichiers) : la Google Sheet partagée par Amélie
+- 📋 **Le contenu commun** (artistes, titres, playlists, noms de fichiers) : la Google Sheet partagée par Amélie -> pas encore fait!
 
 ---
 
@@ -15,7 +15,7 @@ Projet d'équipe du module HTML/CSS : on reproduit **open.spotify.com** tel quel
 1. Récupère le projet avec Git (voir partie 5, « Une seule fois, au début »).
 2. Dans VS Code : clic droit sur `index.html` → **Open with Live Server**.
 3. ⚠️ Ne pas ouvrir les pages en double-clic (adresse `file:///`) : les composants ne se chargent pas, un bandeau rouge te le rappelle.
-4. Pour tester le responsive : DevTools (F12) → **mode appareil** (Ctrl + Maj + M) → essaie 390, 768 et 1280 px de large.
+4. Pour tester le responsive : DevTools (F12) → **mode appareil** (Ctrl + Maj + M) → essaie 390px de large, 768 px, 1280 px.
 
 ## 2. Comment marche le projet
 
@@ -23,7 +23,7 @@ Chaque zone de la page est un **composant** : un fichier HTML dans `components/`
 Les pages (`index.html`, `playlist.html`, `connexion.html`) ne contiennent que des emplacements :
 
 ```html
-<div data-include="components/sidebar.html"></div>
+<div data-include="components/menu-profil.html"></div>
 ```
 
 Le script `js/include.js` remplace chaque emplacement par le contenu du composant.
