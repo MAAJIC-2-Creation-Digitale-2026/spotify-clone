@@ -118,7 +118,7 @@ function demarrerLecteur() {
     if (el('temps')) el('temps').textContent = formaterTemps(audio.currentTime);
     if (progression && audio.duration) {
       progression.value = (audio.currentTime / audio.duration) * 100;
-      progression.style.setProperty('--avancement', progression.value + '%'); // ← ici
+      progression.style.setProperty('--avancement', progression.value + '%'); // variable CSS pour le style de la barre de progression
     }
   });
   if (progression) {
