@@ -5,7 +5,51 @@
      bouton « ⋮ » tout à droite, gris, sans fond ni bordure                            */
 
 .ligne-titre {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 56px;
   /* Flexbox : pochette | textes (prennent toute la place : flex: 1) | bouton */
+}
+.ligne-titre-image-container {
+  display: flex;
+  align-items: center;
+}
+.ligne-titre-image {
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+  border-radius: var(--arrondi-s);
+}
+.ligne-titre-textes {
+  white-space: nowrap;   /* pour que le texte trop long soit coupé avec « … » */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  text-overflow: ellipsis;
+  min-width: 0
+}
+.ligne-titre-titre {
+  font-size: var(--taille-m);
+  color: var(--texte-principal);
+}
+.ligne-titre-artiste {
+  font-size: var(--taille-s);
+  color: var(--texte-secondaire);
+}
+.ligne-titre-plus {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--texte-secondaire);
+  font-size: 16px;
+  cursor: pointer;
+}
+.ligne-titre-plus:hover {
+  color: var(--texte-principal);
 }
 
 /* .ligne-titre-image   */
