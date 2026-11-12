@@ -5,7 +5,44 @@
      :hover / :active sur le play : un peu plus grand (transform: scale(1.05))           */
 
 .playlist-actions {
+display: flex;
+align-items: center;
+justify-content: space-between;
   /* Flexbox : groupe de gauche … groupe de droite (justify-content: space-between) */
 }
+.playlist-left {
+display: flex;
+align-items: center;
+gap: var(--espace-4);
+width: --var(--espace-6);
+}
 
+.playlist-right {
+display: flex;
+align-items: center;
+gap: var(--espace-4);
+}
+
+.btn-icone {
+width: --var(--espace-6);
+
+}
+
+.playlist-actions-play {
+  color: var(--texte-sur-accent);
+  width: var(--taille-bouton-play);
+  height: var(--taille-bouton-play);
+  border-radius: var(--arrondi-rond);
+  background-color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.playlist-actions-play:hover,
+.playlist-actions-play:active {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
 /* .playlist-actions-play */
