@@ -6,27 +6,23 @@
 
 .element-biblio {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: 8px 0;
 }
-
-.element-biblio-image{
+.element-biblio--carree .element-biblio-image {
   width: 64px;
   height: 64px;
   border-radius: var(--arrondi-s);
   margin-right: 12px;
 }
-.element-biblio-image-artiste{
+.element-biblio--ronde .element-biblio-image {
   width: 64px;
   height: 64px;
   border-radius: var(--arrondi-rond);
   margin-right: 12px;
 }
-.element-biblio--ronde {
-  width: 64px;
-  height: 64px;
-  border-radius: var(--arrondi-rond);
-  margin-right: 12px;
-}
+
 .element-biblio-textes {
   display: flex;
   flex-direction: column;
@@ -43,7 +39,6 @@
   font-size: var(--taille-s);
   color: var(--texte-secondaire);
   margin: 0;
-}
 /* .element-biblio-image */
 /* .element-biblio--ronde .element-biblio-image  → border-radius: 50% */
 /* .element-biblio-textes → texte trop long → « … » */

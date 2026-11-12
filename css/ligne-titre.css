@@ -27,16 +27,24 @@
   flex-direction: column;
   overflow: hidden;
   justify-content: center;
-  text-overflow: ellipsis;
-  min-width: 0
+  flex:1;
+  min-width: 0;
 }
 .ligne-titre-titre {
   font-size: var(--taille-m);
   color: var(--texte-principal);
+  white-space: nowrap ; 
+  overflow: hidden ;
+  text-overflow: ellipsis ; 
+  min-width: 0 
 }
 .ligne-titre-artiste {
   font-size: var(--taille-s);
   color: var(--texte-secondaire);
+  white-space: nowrap ; 
+  overflow: hidden ;
+  text-overflow: ellipsis ; 
+  min-width: 0 
 }
 .ligne-titre-plus {
   display: flex;
