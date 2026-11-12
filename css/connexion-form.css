@@ -7,4 +7,18 @@
 
 .connexion-form {
   /* Flexbox en colonne + gap */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--espace-4);
+  justify-content: center;
+  text-align: center;
+}
+.logo{
+  font-size: 40px;
+  color: var(--fond-clair);
+}
+.connexion-form h1 {
+  font-size: 48px;
+  font-weight: var(--graisse-forte);
 }
