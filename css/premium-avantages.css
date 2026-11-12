@@ -1,0 +1,17 @@
+/* premium-avantages · ticket T19 — préfixe .premium-avantages
+   Mesures (téléphone 390 px) :
+     carte : fond #1f1f1f, coins 8 px, pas de padding sur la carte elle-même
+     titre : 20 px gras, blanc, padding 24px 16px
+     trait sous le titre : 1 px #2a2a2a, de bord à bord de la carte (border-bottom du titre)
+     liste : sans puces (list-style: none), padding 16px, 16 px entre deux lignes
+     une ligne : display: flex ; align-items: center ; 12 px entre l'icône et le texte
+     icône : 22 px, blanche, largeur fixe 24 px (pour que les textes soient bien alignés)
+     texte : 14 px, blanc                                                                  */
+
+.premium-avantages {
+}
+
+/* .premium-avantages-titre */
+/* .premium-avantages-liste */
+/* .premium-avantages-liste li */
+/* .premium-avantages-liste i */
