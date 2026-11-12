@@ -1,0 +1,24 @@
+<!--
+  COMPOSANT : premium-entete · ticket T18 · Haut de la page Premium (bandeau en dégradé)
+  Modèle à reproduire (Drive, dossier maquette) : telephone/composants/T18-premium-entete.png
+  (page entière : telephone/05-premium-page-entiere.png)
+
+  Trous : {{image}} photo du bandeau · {{etiquette}} ex. « Premium Personnel »
+          {{titre}} la grosse phrase blanche · {{bouton}} texte du bouton vert
+          {{contenu}} = le petit texte gris (conditions), écrit par la page entre les balises
+
+  À FAIRE : à l'intérieur de <section class="premium-entete">
+    <div class="premium-entete-visuel">           ← la zone photo + dégradé
+      <img class="premium-entete-image" src="{{image}}" alt="">
+      <p class="premium-entete-etiquette"><i class="fa-brands fa-spotify"></i> {{etiquette}}</p>
+      <h1 class="premium-entete-titre">{{titre}}</h1>
+    </div>
+    <a class="premium-entete-bouton" href="#">{{bouton}}</a>
+    <p class="premium-entete-conditions">{{contenu}}</p>
+  Le dégradé vers le noir se pose PAR-DESSUS la photo avec ::after (voir le CSS).
+-->
+<section class="premium-entete">
+  <!-- ton HTML ici -->
+  premium-entete (T18) : {{titre}}
+  {{contenu}}
+</section>

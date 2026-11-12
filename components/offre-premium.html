@@ -11,8 +11,16 @@
     <ul class="offre-premium-avantages">{{contenu}}</ul>
     un bouton pilule <a class="offre-premium-bouton" href="#">Essayer</a>
 -->
-<article class="offre-premium" style="--couleur: {{couleur}}">
-  <!-- ton HTML ici -->
-  offre-premium (T15) : {{nom}}
-  {{contenu}}
+<article class="premium-card premium-plan" style="--couleur: {{couleur}}">
+  <span class="premium-ribbon" >{{essai}}</span>
+  <div class="premium-plan-header">
+    <span class="premium-plan-brand"><i class="fa-brands fa-spotify"></i>Premium</span>
+    <h2 class="offre-premium-nom">{{nom}}</h2>
+    <p class="offre-premium-prix">{{prix}}</p>
+    <p class="premium-plan-subprice">{{ensuite}}</p>
+  </div>
+  <hr class="premium-divider">
+    <ul class="offre-premium-avantages">{{contenu}}</ul>
+    <button class="premium-cta">{{bouton}}</button>
+  <p class="premium-legal">{{conditions}}</p>
 </article>

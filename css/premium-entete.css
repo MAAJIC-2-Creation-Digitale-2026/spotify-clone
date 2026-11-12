@@ -1,0 +1,27 @@
+/* premium-entete · ticket T18 — préfixe .premium-entete
+   Mesures (téléphone 390 px) :
+     zone photo (.premium-entete-visuel) : toute la largeur de l'écran (marges négatives
+       -16px à gauche et à droite pour toucher les bords), hauteur ≈ 320 px (margin-top: -8px pour coller au haut de l’écran)
+     photo : position: absolute ; inset: 0 ; width/height 100 % ; object-fit: cover
+     dégradé : un ::after en position: absolute par-dessus la photo
+       linear-gradient(to bottom, transparent 30%, #121212 100%)
+     étiquette : logo Spotify 18 px + texte 14 px gras, vert #1ed760, en bas de la photo
+     titre : 26 px, gras, blanc, interligne ≈ 1.1, posé en bas de la photo (par-dessus le dégradé)
+     bouton : pilule vert #1ed760, texte noir gras 16 px, toute la largeur, hauteur 48 px,
+       16 px sous le titre
+     conditions : 12 px, gris #b3b3b3, le lien souligné et blanc, 16 px sous le bouton
+
+   Astuce : .premium-entete-visuel en position: relative (le repère),
+   la photo et le ::after en position: absolute, le texte avec position: relative + z-index: 1
+   pour passer devant le dégradé.                                                        */
+
+.premium-entete {
+}
+
+/* .premium-entete-visuel → position: relative ; margin: 0 -16px ; height ; display: flex (texte en bas) */
+/* .premium-entete-image → position: absolute ; inset: 0 ; object-fit: cover */
+/* .premium-entete-visuel::after → content: "" ; position: absolute ; inset: 0 ; background: linear-gradient(...) */
+/* .premium-entete-etiquette */
+/* .premium-entete-titre */
+/* .premium-entete-bouton */
+/* .premium-entete-conditions et .premium-entete-conditions a */
