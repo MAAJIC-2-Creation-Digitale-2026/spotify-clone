@@ -10,3 +10,25 @@
 
 /* .playlist-entete-image → display: block ; margin: 0 auto (centrée) */
 /* .playlist-entete-titre */
+
+.playlist-entete{
+  position: relative;
+  min-width: 440px;
+  padding: var(--espace-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background: linear-gradient(
+    to bottom
+    rgba(0,0,0,0.05) 0%,
+    var(--couleur) 100%
+  );
+  color: var( --texte-principal);
+  overflow: hidden;
+}
+
+.playlist-entete-image {
+  
+
+}

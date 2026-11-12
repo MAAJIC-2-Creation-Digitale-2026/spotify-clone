@@ -14,15 +14,28 @@
   La variable --couleur est déjà posée par l'attribut style : sers-t'en dans le dégradé.
 -->
 <header class="playlist-entete" style="--couleur: {{couleur}}">
-  <section class="playlist-entete__titre">
-    <img class="playlist-entete-image" src="https://i.scdn.co/image/ab6761610000101fc1719ac9e6a75c1c25835018" alt="The Weeknd">
+  <div class="playlist-entete__header">
+
+    <img class="playlist-entete-image" src="https://i.scdn.co/image/ab6761610000101fc1719ac9e6a75c1c25835018" alt="Mix The Weeknd">
     <a href="index.html">
       <i class="fa-solid fa-chevron-left"></i>
     </a>
-    <h1 class="playlist-entete-titre">Mix The Weeknd</h1>
-  </section>
-  <section class="playlist-entete__infos">
-    <p>Rihanna, Doja Cat et Future</p>
-    <img class="playlist-entete-logo" src="asset/img/logo.svg">
-  </section>
+    
+  </div>
+
+  <div class="playlist-entete__infos">
+    <p class="playlist__type">{{Playlist publique}}</p>
+    <h1 class="playlist-entete-titre">{{titre}}</h1>
+    <p class="playlist__artistes">{{Rihanna, Doja Cat et Future}}</p>
+    <div class="playlist__auteur">
+      <i class="fa-brands fa-spotify"></i>
+      <span>Spotify</span>
+      <span>· 50 titres, environ 3 h 15 min</span>
+    </div>
+    <p class="playlist__description">Recommandations et impact de la promotion</p>
+  </div>
 </header>
+
+<section>
+
+</section>
