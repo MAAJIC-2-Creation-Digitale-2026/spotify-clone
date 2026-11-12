@@ -6,40 +6,38 @@
      ligne « Récents » : texte 14 px, 16 px au-dessus                                     */
 
 .biblio-entete {
- display: flex;
- flex-direction: column;
- gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 
 
 /* .biblio-entete-titre */
 
-.ligne-une {
+.biblio-entete-ligne-une {
   display: flex;
   align-items: center;
-  
- 
- 
+
 }
 
-.ligne-deux{
+.biblio-entete-ligne-deux {
   display: flex;
   justify-content: baseline;
- 
+
 }
 
-.trois{
+.biblio-entete-ligne-trois{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  
 }
 
-.avatar{
-  
+.biblio-entete-avatar {
+
   color: black;
-  background-color: #1ed760;
- 
+  background-color: var(--accent);
+
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -50,30 +48,24 @@
   align-items: center;
   justify-content: center;
 
-  font-size:1.5rem;
+  font-size: 1.5rem;
 
 }
 
-.bibli{
-  margin-right: 84px;
-}
-
-
-
-#loupe{
+.biblio-entete-loupe {
   font-size: 22px;
   margin-right: 16px;
-
+  margin-left: auto
 }
 
-#plus{
- font-size: 26px;
+.biblio-entete-plus {
+  font-size: 26px;
 }
 
 
 
 
-.recents{
+.biblio-entete-recents {
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -83,20 +75,19 @@
 
 /* .biblio-entete-filtre */
 
-.pillules{
+.biblio-entete-pillules {
   margin-right: 10px;
 
   display: flex;
- 
   align-items: center;
 
-color: white;
-background-color:rgba(255, 255, 255, 0.07);
-border-radius:30px ;
-font-size: 0.875rem;
+  color: white;
+  background-color: var(--fond-pilule);
+  border-radius: 30px;
+  font-size: 0.875rem;
 
-padding-right: 12px;
-padding-left: 12px;
-height: 32px;
+  padding-right: 12px;
+  padding-left: 12px;
+  height: 32px;
 
 }
