@@ -11,25 +11,38 @@
     3. une ligne « Récents » : à gauche un bouton tri (fa-arrow-down-wide-short + « Récents »),
        à droite un bouton d'affichage en grille (fa-table-cells-large, aria-label="Afficher en grille")
 -->
+
+
+
+
 <div class="biblio-entete">
-   <div class="ligne-une">
-    <h1 class="avatar" > A </h1>
-    <h1>Bibliothèque</h1>
-    <i class="fi fi-tr-search"></i>
-    <i class="fi fi-rr-plus"></i>
+
+
+   <div class="biblio-entete-ligne-une">
+      <button class="biblio-entete-avatar" popovertarget="menu-profil" aria-label="Ouvrir le menu du profil">A</button>
+
+      <h1 >Bibliothèque</h1>
+      <bouton class="biblio-entete-loupe" aria-label="Rechercher"> <i  aria-hidden="true" class="fa-solid fa-magnifying-glass"></i></bouton> 
+      <bouton  class="biblio-entete-plus" aria-label="Créer"><i  aria-hidden="true" class="fa-solid fa-plus"></i></bouton> 
 
    </div>
 
-   <div class="ligne-deux">
-    <p class="pillules" >Playlists</p>
-    <p class="pillules">Album</p>
-    <p class="pillules">Artistes</p>
-    
+   <div class="biblio-entete-ligne-deux">
+      <bouton class="biblio-entete-pillules">Playlists</bouton>
+      <bouton class="biblio-entete-pillules">Album</bouton>
+      <bouton class="biblio-entete-pillules">Artistes</bouton>
+
    </div>
 
-   <div class="ligne-trois">
-    <p>Titres</p>
-    
+
+   <div class="biblio-entete-ligne-trois">
+
+      <div class="biblio-entete-recents">
+         <i class="fa-solid fa-sort"></i>
+         <p>Récents</p>
+      </div>
+
+      <i class="fa-solid fa-border-all"></i>
    </div>
 
 
