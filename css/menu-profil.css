@@ -17,18 +17,20 @@
 #menu-profil.menu-profil {
   position: fixed;
   inset: 0 auto 0 0;
-  height: 100%; 
   margin: 0;
   background-color: var(--fond-survol);
   color: var(--texte-principal);
-  width: 320 px;
+  width: var(--largeur-panneau);
   height: 100%;
+}
+.menu-profil::backdrop {
+  background-color: var(--fond-page);
 }
 .menu-profil__en-tete{
   margin: 0 8px 0 16px;
 }
 
-.contenu{ 
+.menu-profil__contenu{ 
   margin: 8px 16px;
 }
 .menu-profil__en-tete {
@@ -36,77 +38,86 @@
   flex-direction: row;
   align-items: center;
   padding: 15px 0 10px;
-  gap: 18px;
+  gap: var(--espace-4);
 }
 .menu-profil__en-tete i {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 50%;
+  width: var(--taille-bouton-rond);
+  height: var(--taille-bouton-rond);
+  min-width: var(--taille-bouton-rond);
+  border-radius: var( --arrondi-rond);
   background-color: var(--accent);
   color: var(--texte-sur-accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 38px;
+  font-size: var( --taille-xl);
 }
 
 .menu-profil__identite{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 8px;
+  gap: var(--espace-2);
 }
 .menu-profil__identite h2{
-  font-weight: 700;
-  font-size: 25px;
+  font-weight: var(--graisse-forte);
+  font-size: var(--taille-l);
   margin: 0;
 }
 .menu-profil__identite h4 {
   color: var(--texte-secondaire);
-  font-size: 18px;
-  font-weight: 600;
+  font-size: var(--taille-m);
+  font-weight: var(--graisse-moyenne);
   margin: 0;
 
 }
 #menu-profil hr {
   border: none;
-  border-top: 1px solid #3a3a3a;
+  border-top: 1px solid var(--fond-actif);
   margin: 0 -18px 10px;
 }
 .menu-profil__liste li{
-  font-size: 19px;
-  font-weight: 700;
+  font-size: var(--taille-m);
+  font-weight: var(--graisse-forte);
   line-height: 1.3;
-  gap: 15px;
 }
 .menu-profil__liste ul{
   list-style: none;
   padding: 0;
   margin: 0;
 }
-i{
-  width: 44px;
-  height: 44px;
+.menu-profil__liste li {
+  padding: var(--espace-1);
+  margin-bottom: var( --espace-1);
+  border-radius: var(--arrondi-m);
+  transition: background-color var( --duree-transition) ease;
+}
+.menu-profil__liste li:hover {
+  background-color: var(--fond-pilule);
+  margin: var(--espace-1);
+}
+
+.menu-profil__liste i{
+  width: var(--taille-bouton-rond);
+  height: var(--taille-bouton-rond);
 }
 .menu-profil__contacts {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 15px;
   width: 100%;
 }
 .menu-profil__ajouter-contacts i {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 50%;
-  background-color: #303030;
+  width: var(--taille-bouton-rond);
+  height: var(--taille-bouton-rond);
+  min-width: var(--taille-bouton-rond);
+  border-radius: var(--arrondi-rond);
+  background-color: var(--fond-pilule);
   color: var(--texte-principal);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  font-size: var(--taille-m);
   margin: 0 1px 10px 0;
 }
 .menu-profil__ajouter-contacts {
@@ -122,45 +133,86 @@ i{
 .menu-profil__ajouter-contacts h5{
   width: 100%;
   text-align: center;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--taille-s);
+  font-weight: var(--graisse-forte);
   line-height: 1.4;
   margin: 0;
   overflow-wrap: break-word;
 }
 .menu-profil__activité i {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 50%;
+  width: var(--taille-bouton-rond);
+  height: var(--taille-bouton-rond);
+  min-width: var(--taille-bouton-rond);
+  border-radius: var(--arrondi-rond);
   background-color: var(--accent);
   color: var(--texte-sur-accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 38px;
+  font-size: var(--taille-xl);
   margin: 0 0 10px 2px;
 }
 .menu-profil__activité {
-  font-size: 14px;
-  margin-left: 12px;
+  font-size: var(--taille-s);
+  margin-left: var(--espace-3);
   font-weight: bold;
 }
-p{
-  font-size: 13px;
+.menu-profil__activité p{
+  font-size: var(--taille-xs);
   color: var(--texte-secondaire);
+  
 }
-.messages h2{
+.menu-profil__messages h2{
   padding: 15px 0 0 0;
 }
-.messages i{
+.menu-profil__messages i{
   padding: 2px 0 0 150px;
   
 }
+.menu-profil__messages div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--taille-l);
+  margin-left: 110px;
 
-.menu-profil::backdrop {
-  /* le fond assombri derrière le tiroir */
 }
+.menu-profil__messages p {
+  font-size: var(--taille-s);
+  color: var(--texte-secondaire);
+}
+.menu-profil__nouveau_message {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: var(--espace-2);
+  margin-top: var(--espace-1);
+  width: 100%;
+}
+.menu-profil__nouveau_message h5{
+  width: 100%;
+  text-align: start;
+  font-size: var(--taille-s);
+  font-weight: var(--graisse-forte);
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+}
+
+.menu-profil__nouveau_message i{
+  width: var(--taille-bouton-rond);
+  height: var(--taille-bouton-rond);
+  min-width: var(--taille-bouton-rond);
+  border-radius: var(--arrondi-rond);
+  background-color: var( --fond-pilule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--taille-l);
+  padding: 0 0 2px 2px;
+}
+
+
 
 
 /* MOBILE D'ABORD : les styles ci-dessus sont pour le téléphone.
