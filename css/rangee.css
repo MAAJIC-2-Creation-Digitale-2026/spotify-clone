@@ -4,7 +4,17 @@
      cartes côte à côte, 14 px entre deux cartes
      la rangée défile à l'horizontale ; la 3e carte est coupée par le bord de l'écran   */
 
-.rangee {
+.rangee-titre {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.rangee-liste {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Bonus : cacher la barre de défilement */
+  scroll-snap-type: x mandatory; /* Bonus : faire « s'aimanter » les cartes */
 }
 
 /* .rangee-titre  → 20 px, gras */
