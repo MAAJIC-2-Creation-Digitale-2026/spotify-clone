@@ -80,7 +80,7 @@
    transform: scale(0.96);
 }
 
-.header-chip.active {
+.header-chip-active {
    background-color: var(--accent);
    color: var(--texte-sur-clair);
    font-weight: var(--graisse-forte);

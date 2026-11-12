@@ -40,6 +40,16 @@
   margin-top: 18px;
 }
 
+/* 1. Masque le ruban s'il ne contient aucun texte ({{essai}} vide), c'est fou carrement*/
+.premium-ribbon:empty {
+  display: none;
+}
+
+/* 2. Remonte le header en annulant le décalage quand le ruban est vide */
+.premium-ribbon:empty + .premium-plan-header {
+  margin-top: 0;
+}
+
 /* --- DÉTAILS DES OFFRES --- */
 .premium-plan-brand {
   display: inline-flex;
@@ -113,6 +123,5 @@
   font-weight: var(--graisse-moyenne);
   color: var(--texte-secondaire);
   margin: 12px 0 0 0;
-  align-items: center;
   text-align: center;
 }
