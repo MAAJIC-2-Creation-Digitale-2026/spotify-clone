@@ -29,10 +29,10 @@
   text-align: left;
   height: var(--hauteur-champ);
   background-color: var(--fond-bloc);
-  border: 1px solid #727272;
+  border: 1px solid var(--texte-secondaire);
   border-radius: var(--arrondi-s);
 }
-:focus-visible {
+#email:focus-visible, #mdp:focus-visible {
   border: 2px solid var(--fond-clair);
 }
 .connexion-form-bouton {
