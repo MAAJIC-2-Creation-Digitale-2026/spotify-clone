@@ -21,17 +21,26 @@
   position: relative;
   left: 0;
   top: 0; 
-  height: 420px;
+  height: 400px;
   width:110%;
   max-width: 200%;
-  margin: -8px -16px 8px -16px;
-  background: linear-gradient(to bottom, var(--couleur), #121212);
+  margin: -8px -16px 0px -16px;
   box-shadow: ;
 }
+
+.playlist-entete::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom,var(--couleur) 0%, rgba(18, 18, 18, 0.7) 70%, var(--fond-page) 100%);
+}
+
 .playlist-entete i {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 1;
   background-color: var(--fond-survol);
   border-radius: var(--arrondi-rond);
   width: var(--taille-l);
@@ -43,9 +52,10 @@
   margin: var(--espace-4);
 }
 .playlist-entete-image {
-  display: flex;
-  width: 200px;
-  height: 200px;
+  position: absolute;
+  top: 20px;
+  width: 240px;
+  height: 240px;
   display: block;
   margin: 0 auto;
 }
