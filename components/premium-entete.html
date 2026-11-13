@@ -18,7 +18,18 @@
   Le dégradé vers le noir se pose PAR-DESSUS la photo avec ::after (voir le CSS).
 -->
 <section class="premium-entete">
-  <!-- ton HTML ici -->
-  premium-entete (T18) : {{titre}}
-  {{contenu}}
+  <header class="premium-entete">
+  <div class="premium-entete-visuel">
+    <img class="premium-entete-image" src="{{image}}" alt="">
+    <div class="premium-entete-degrade"></div>
+    <div class="premium-entete-contenu-visuel">
+      <p class="premium-entete-etiquette"><i class="fa-brands fa-spotify"></i>{{etiquette}}</p>
+      <h1 class="premium-entete-titre">{{titre}}</h1>
+    </div>
+  </div>
+  <div class="premium-entete-bas">
+    <a class="premium-entete-bouton" href="#">{{bouton}}</a>
+    <p class="premium-entete-conditions">{{contenu}}</p>
+  </div>
+</header>
 </section>
