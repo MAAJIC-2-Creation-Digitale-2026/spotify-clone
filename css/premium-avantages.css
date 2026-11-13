@@ -8,7 +8,55 @@
      icône : 22 px, blanche, largeur fixe 24 px (pour que les textes soient bien alignés)
      texte : 14 px, blanc                                                                  */
 
+/* Carte principale « Pourquoi s'abonner à Premium ? » */
 .premium-avantages {
+  background-color: var(--fond-survol);
+  border-radius: var(--arrondi-m);
+  padding: var(--espace-6) var(--espace-4);
+  color: var(--texte-principal);
+}
+
+/* Titre avec la ligne de séparation qui traverse toute la carte */
+.premium-avantages-titre {
+  font-size: var(--taille-m);
+  font-weight: var(--graisse-forte);
+  
+  /* 1. Étire le bloc de 16px à gauche et à droite pour annuler le padding de la section */
+  margin: 0 -16px 14px -16px;
+  
+  /* 2. Remet les 16px d'espace interne pour que le texte reste bien aligné */
+  padding: 0 var(--espace-4) 14px var(--espace-4);
+  
+  border-bottom: 1px solid #545454;
+}
+
+/* Liste sans puces */
+.premium-avantages-liste {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-4);
+}
+
+/* Alignement de chaque ligne (icône + texte) */
+.premium-avantages-liste li {
+  display: flex;
+  align-items: center;
+  gap: var(--espace-3);
+  font-size: var(--taille-s);
+  font-weight: var(--graisse-moyenne);
+  line-height: 1.35;
+}
+
+/* Mise en forme et largeur fixe de l'icône pour que tous les textes soient bien alignés */
+.premium-avantages-liste i {
+  width: 22px;
+  text-align: center;
+  font-size: 24px;
+  color: var(--texte-principal);
+  flex-shrink: 0;
 }
 
 /* .premium-avantages-titre */
