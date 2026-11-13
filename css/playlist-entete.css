@@ -4,9 +4,77 @@
      pochette centrée ≈ 240 × 240, ombre portée (box-shadow)
      titre 24 px gras à gauche · créateur 14 px blanc gras · infos 14 px gris            */
 
-.playlist-entete {
-  /* background: linear-gradient(...) ; padding ; marges négatives si tu veux toucher les bords */
-}
+
 
 /* .playlist-entete-image → display: block ; margin: 0 auto (centrée) */
 /* .playlist-entete-titre */
+.playlist-entete-groupe {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  margin :0
+}
+.playlist-entete{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 0;
+  top: 0; 
+  height: 400px;
+  width:110%;
+  max-width: 200%;
+  margin: -8px -16px 0px -16px;
+  box-shadow: ;
+}
+
+.playlist-entete::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom,var(--couleur) 0%, rgba(18, 18, 18, 0.7) 70%, var(--fond-page) 100%);
+}
+
+.playlist-entete i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: var(--fond-survol);
+  border-radius: var(--arrondi-rond);
+  width: var(--taille-l);
+  height: var(--taille-l);
+  min-width: var(--taille-l);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--espace-4);
+}
+.playlist-entete-image {
+  position: absolute;
+  top: 20px;
+  width: 240px;
+  height: 240px;
+  display: block;
+  margin: 0 auto;
+}
+.playlist-entete-titre {
+  position: relative;
+  font-size: var(--taille-xl);
+}
+.playlist-entete-createur {
+  font-size: var(--taille-s);
+  color: var(--texte-principal);
+  font-weight: bold;
+}
+.playlist-entete-infos {
+  font-size: var(--taille-s);
+  color: var(--texte-secondaire);
+}
+.playlist-entete-informations{
+  position : absolute;
+  bottom : 0;
+  left : 0;
+  padding: var(--espace-4);
+}
