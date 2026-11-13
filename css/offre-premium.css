@@ -55,11 +55,14 @@
   display: inline-flex;
   align-items: center;
   gap: var(--espace-1);
-  font-size: var(--taille-xs);
+  font-size: var(--taille-s);
   font-weight: var(--graisse-forte);
   margin-bottom: var(--espace-2);
 }
 
+.premium-plan-brand i{
+  font-size: 16px;
+}
 
 .offre-premium-nom {
   font-weight: var(--graisse-forte);
