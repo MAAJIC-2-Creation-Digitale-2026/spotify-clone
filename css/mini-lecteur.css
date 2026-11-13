@@ -15,7 +15,8 @@
   left: var(--espace-2);
   right: var(--espace-2);
   height: var(--taille-bouton-play);
-  background-color: #5a3d8a;
+  background-color: var(--bg-pochette, --fond-bloc);
+  transition: background-color 0.4s ease;
   border-radius: var(--arrondi-m);
   display: flex;
   align-items: center;

@@ -68,7 +68,7 @@ Trou spécial : `{{contenu}}` reçoit **ce que la page a écrit entre les balise
 - **Seulement tes 2 fichiers.** Besoin de changer une page, `tokens.css` ou `page-mobile.css` ? On demande au / à la lead.
 - **Préfixe de classe** = nom du composant : tout ce qui est dans `carte.css` commence par `.carte`.
 - **Les couleurs et tailles** : les variables de `css/tokens.css` (`var(--accent)`, `var(--texte-secondaire)`…).
-- **Les contenus** viennent de la Google Sheet de l'équipe (artistes, titres, pochettes) : pas de vrais artistes.
+- **Les contenus** (artistes, albums, titres, playlists, images, sons) sont dans la partie 6 du `README.md` : pas de vrais artistes.
 - **Jamais de push sur `main`.** Toujours une branche + une Pull Request.
 - **Bloqué·e plus de 10 minutes ?** On demande (voisin·e, lead, Amélie).
 

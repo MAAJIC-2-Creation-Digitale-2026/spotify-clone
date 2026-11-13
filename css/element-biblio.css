@@ -8,37 +8,78 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 8px 0;
+  padding: var(--espace-2);          /* 8px tout autour : le fond gris ne colle pas au texte */
+  border-radius: var(--arrondi-s);   /* coins arrondis 4px */
+  text-decoration: none;             /* pas de soulignement, c'est un lien */
 }
+
+.element-biblio:hover,
+.element-biblio:active {
+  background-color: var(--fond-actif);
+}
+
 .element-biblio--carree .element-biblio-image {
   width: 64px;
   height: 64px;
   border-radius: var(--arrondi-s);
-  margin-right: 12px;
+  margin-right: var(--espace-3);
 }
+
+.element-biblio-image {
+  flex-shrink: 0;
+  /* l'image ne se réduit pas si le texte est trop long */
+}
+
 .element-biblio--ronde .element-biblio-image {
   width: 64px;
   height: 64px;
   border-radius: var(--arrondi-rond);
-  margin-right: 12px;
+  margin-right: var(--espace-3);
 }
 
 .element-biblio-textes {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;  /* pour que le texte trop long soit tronqué par « … » */
+  overflow: hidden;
+
+  /* pour que le texte trop long soit tronqué par « … » */
 }
+
 .element-biblio-titre {
   font-size: var(--taille-m);
   font-weight: var(--graisse-moyenne);
   color: var(--texte-principal);
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 .element-biblio-type {
   font-size: var(--taille-s);
   color: var(--texte-secondaire);
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.element-biblio--carree .element-biblio-image {
+  border-radius: var(--arrondi-s);
+}
+
+.element-biblio-image {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  margin-right: var(--espace-3);
+}
+
+.element-biblio--ronde .element-biblio-image {
+  border-radius: var(--arrondi-rond);
+}
+
 /* .element-biblio-image */
 /* .element-biblio--ronde .element-biblio-image  → border-radius: 50% */
 /* .element-biblio-textes → texte trop long → « … » */
