@@ -8,7 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--fond-bloc);
+  background-color: var(--fond-page);
   width: 100%;
   font-family: var(--police);
   font-weight: var(--graisse-normale);
@@ -23,7 +23,6 @@
    align-items: center;
    gap: var(--espace-3);
    height: var(--taille-bouton-play);
-   padding: 0 var(--espace-4);
    box-sizing: border-box;
 }
 
