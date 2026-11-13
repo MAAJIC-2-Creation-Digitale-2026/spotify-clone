@@ -1,5 +1,8 @@
 # Spotify clone — L2 Création digitale (ILOI)
 
+> 🧪 **TESTS UTILISATEURS : [ouvrir la liste de contrôle commune (Google Sheet)](https://docs.google.com/spreadsheets/d/1yGPADmtX2wwcTm_oXfsyvT-rJqsSGF2WQvVdbM2_dhg/edit?usp=sharing)**
+> Lis l'onglet « Mode d'emploi », puis remplis l'onglet « Liste de contrôle » (ton prénom, le résultat, ce que tu as vu). Un problème qui n'est dans aucune ligne : onglet « Retours en vrac ».
+
 Projet d'équipe du module HTML/CSS : on reproduit **l'appli Spotify**, en équipe, découpée en **petits composants** (une carte, une barre, une ligne…).
 On commence par la **version téléphone (390 px)**. La version ordinateur viendra après.
 5 jours : jeu. 05/11 · mar. 10/11 · jeu. 12/11 · ven. 13/11 · mar. 17/11. **Rendu le mar. 17/11 à 12h00.**
