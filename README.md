@@ -157,18 +157,18 @@ Tous les artistes sont **inventés**. On n'utilise que ce contenu (pas de vrais 
 
 ### Les titres (page playlist et lecteur)
 
-Seuls les 3 premiers titres ont un vrai son : ce sont les 3 pistes du lecteur (`data-piste="0"`, `"1"`, `"2"`). Les mp3 viennent de [Pixabay Music](https://pixabay.com/music/) et sont **déjà dans le projet**, dans `assets/audio/`. Dans `js/player.js` (liste `PISTES`), le champ `fichier` reçoit le chemin de la colonne « Extrait mp3 ».
+Les 8 premiers titres ont un vrai son : ce sont les 8 pistes du lecteur (`data-piste="0"` à `"7"`). Les mp3 viennent de [Pixabay Music](https://pixabay.com/music/) et sont **déjà dans le projet**, dans `assets/audio/`. Dans `js/player.js` (liste `PISTES`), le champ `fichier` reçoit le chemin de la colonne « Extrait mp3 ».
 
 | # | Titre | Artiste | Album | Durée | Piste | Pochette | Extrait mp3 |
 |---|---|---|---|---|---|---|---|
 | 1 | Ti lampé | Lova Kaz | Kabar la nuit | 4:19 | 0 | `pochettes/kabar-la-nuit.jpg` | `assets/audio/titre-1.mp3` |
 | 2 | Bleu piscine | Nayla Rivière | Bleu piscine | 1:54 | 1 | `pochettes/bleu-piscine.jpg` | `assets/audio/titre-2.mp3` |
 | 3 | Coulée | Piton Club | Basalte | 1:50 | 2 | `pochettes/basalte.jpg` | `assets/audio/titre-3.mp3` |
-| 4 | La case en tôle | Les Tamarins | Les fruits du jardin | 4:05 | | `pochettes/les-fruits-du-jardin.jpg` | |
-| 5 | Tension basse | Velours Mécanique | Circuits fragiles | 5:21 | | `pochettes/circuits-fragiles.jpg` | |
-| 6 | Le col des Bœufs | Isaure Delmas | Lettres du col | 3:33 | | `pochettes/lettres-du-col.jpg` | |
-| 7 | Minuit vanille | Saphir Nwar | Minuit vanille | 3:07 | | `pochettes/minuit-vanille.jpg` | |
-| 8 | Marée haute | Orchestre du Lagon | Marées | 6:12 | | `pochettes/marees.jpg` | |
+| 4 | La case en tôle | Les Tamarins | Les fruits du jardin | 2:18 | 3 | `pochettes/les-fruits-du-jardin.jpg` | `assets/audio/titre-4.mp3` |
+| 5 | Tension basse | Velours Mécanique | Circuits fragiles | 2:19 | 4 | `pochettes/circuits-fragiles.jpg` | `assets/audio/titre-5.mp3` |
+| 6 | Le col des Bœufs | Isaure Delmas | Lettres du col | 2:53 | 5 | `pochettes/lettres-du-col.jpg` | `assets/audio/titre-6.mp3` |
+| 7 | Minuit vanille | Saphir Nwar | Minuit vanille | 2:55 | 6 | `pochettes/minuit-vanille.jpg` | `assets/audio/titre-7.mp3` |
+| 8 | Marée haute | Orchestre du Lagon | Marées | 1:24 | 7 | `pochettes/marees.jpg` | `assets/audio/titre-8.mp3` |
 | 9 | Kabar la nuit | Lova Kaz | Kabar la nuit | 4:18 | | `pochettes/kabar-la-nuit.jpg` | |
 | 10 | Basalte | Piton Club | Basalte | 2:49 | | `pochettes/basalte.jpg` | |
 | 11 | Mangue verte | Les Tamarins | Les fruits du jardin | 3:36 | | `pochettes/les-fruits-du-jardin.jpg` | |
@@ -256,3 +256,8 @@ Pas besoin de Node ni de `npm install` : Live Server suffit.
   - `titre-1.mp3`, piste 0, « Ti lampé » (Lova Kaz) : [Jabali - Breakbeat Of Africa, par Rockot](https://pixabay.com/music/world-jabali-breakbeat-of-africa-african-tribe-electronic-fusion-253188/)
   - `titre-2.mp3`, piste 1, « Bleu piscine » (Nayla Rivière) : [Summer Pop, par The_Mountain](https://pixabay.com/music/pop-summer-pop-593072/)
   - `titre-3.mp3`, piste 2, « Coulée » (Piton Club) : [Hip Hop Beat, par AtlasAudio](https://pixabay.com/music/alternative-hip-hop-hip-hop-beat-606262/)
+  - `titre-4.mp3`, piste 3, « La case en tôle » (Les Tamarins) : [Indie Rock Music Grunge Nostalgia, par echoes_of_lumen](https://pixabay.com/music/rock-indie-rock-music-grunge-nostalgia-586980/)
+  - `titre-5.mp3`, piste 4, « Tension basse » (Velours Mécanique) : [Dark Synthwave, par Kulakovka](https://pixabay.com/music/synthwave-dark-synthwave-624644/)
+  - `titre-6.mp3`, piste 5, « Le col des Bœufs » (Isaure Delmas) : [The Beat of Nature, par folk_acoustic](https://pixabay.com/music/solo-guitar-the-beat-of-nature-122841/)
+  - `titre-7.mp3`, piste 6, « Minuit vanille » (Saphir Nwar) : [Soul RnB, par The_Mountain](https://pixabay.com/music/beats-soul-rnb-618233/)
+  - `titre-8.mp3`, piste 7, « Marée haute » (Orchestre du Lagon) : [Deep Ocean, par leberch](https://pixabay.com/music/modern-classical-deep-ocean-313741/)
