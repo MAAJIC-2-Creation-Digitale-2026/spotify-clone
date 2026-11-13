@@ -13,22 +13,52 @@
 
 const PISTES = [
   {
-    titre: 'Titre 1',
-    artiste: 'Artiste 1',
-    pochette: 'assets/img/pochettes/album-1.jpg',
+    titre: 'Ti lampé',
+    artiste: 'Lova Kaz',
+    pochette: 'assets/img/pochettes/kabar-la-nuit.jpg',
     fichier: 'assets/audio/titre-1.mp3'
   },
   {
-    titre: 'Titre 2',
-    artiste: 'Artiste 2',
-    pochette: 'assets/img/pochettes/album-2.jpg',
+    titre: 'Bleu piscine',
+    artiste: 'Nayla Rivière',
+    pochette: 'assets/img/pochettes/bleu-piscine.jpg',
     fichier: 'assets/audio/titre-2.mp3'
   },
   {
-    titre: 'Titre 3',
-    artiste: 'Artiste 3',
-    pochette: 'assets/img/pochettes/album-3.jpg',
+    titre: 'Coulée',
+    artiste: 'Piton Club',
+    pochette: 'assets/img/pochettes/basalte.jpg',
     fichier: 'assets/audio/titre-3.mp3'
+  },
+  {
+    titre: 'La case en tôle',
+    artiste: 'Les Tamarins',
+    pochette: 'assets/img/pochettes/les-fruits-du-jardin.jpg',
+    fichier: 'assets/audio/titre-4.mp3'
+  },
+  {
+    titre: 'Tension basse',
+    artiste: 'Velours Mécanique',
+    pochette: 'assets/img/pochettes/circuits-fragiles.jpg',
+    fichier: 'assets/audio/titre-5.mp3'
+  },
+  {
+    titre: 'Le col des Bœufs',
+    artiste: 'Isaure Delmas',
+    pochette: 'assets/img/pochettes/lettres-du-col.jpg ',
+    fichier: 'assets/audio/titre-6.mp3'
+  },
+  {
+    titre: 'Minuit vanille',
+    artiste: 'Saphir Nwar',
+    pochette: 'assets/img/pochettes/minuit-vanille.jpg',
+    fichier: 'assets/audio/titre-7.mp3'
+  },
+  {
+    titre: 'Marée haute',
+    artiste: 'Orchestre du Lagon',
+    pochette: 'assets/img/pochettes/marees.jpg',
+    fichier: 'assets/audio/titre-8.mp3'
   }
 ];
 
@@ -45,10 +75,35 @@ function demarrerLecteur() {
   if (!audio) return; // pas de lecteur sur cette page (ex. connexion)
 
   const lecteur = document.querySelector('.player');
+  const miniLecteur = document.querySelector('.mini-lecteur'); // Ajout pour le fond dynamique ← ici
   const boutonPlay = el('play');
   const progression = el('progression');
   const volume = el('volume');
   let numero = 0; // numéro de la piste en cours dans PISTES
+
+  // Extrait la couleur moyenne de la pochette et l'assombrit pour le fond du mini-lecteur ← ici
+  function majCouleurPochette(img) {
+    if (!miniLecteur || !img || img.naturalWidth === 0) return;
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = 1;
+    canvas.height = 1;
+    try {
+      ctx.drawImage(img, 0, 0, 1, 1);
+      const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
+      const rSombre = Math.floor(r * 0.55);
+      const gSombre = Math.floor(g * 0.55);
+      const bSombre = Math.floor(b * 0.55);
+      miniLecteur.style.setProperty('--bg-pochette', `rgb(${rSombre}, ${gSombre}, ${bSombre})`);
+    } catch (e) {
+      // Garde la couleur par défaut (#5a3d8a)
+    }
+  }
+
+  // Écoute le chargement de chaque nouvelle pochette ← ici aussi
+  if (el('pochette')) {
+    el('pochette').addEventListener('load', () => majCouleurPochette(el('pochette')));
+  }
 
   // Charge une piste : fichier audio + titre, artiste, pochette affichés
   function chargerPiste(n) {
