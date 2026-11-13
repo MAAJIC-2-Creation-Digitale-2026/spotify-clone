@@ -18,7 +18,6 @@
 .premium-entete {
   background-color: var(--fond-page);
   color: var(--texte-principal);
-  padding-bottom: var(--espace-4);
 }
 
 /* Zone photo + dégradé (sort du padding parent) */
@@ -122,6 +121,10 @@
   line-height: 1.4;
   color: var(--texte-secondaire);
   font-weight: var(--graisse-forte);
+}
+
+.premium-entete-conditions a{
+  text-decoration: underline;
 }
 
 /* .premium-entete-visuel → position: relative ; margin: 0 -16px ; height ; display: flex (texte en bas) */
