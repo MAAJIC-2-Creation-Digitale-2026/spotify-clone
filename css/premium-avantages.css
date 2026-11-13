@@ -10,7 +10,7 @@
 
 /* Carte principale « Pourquoi s'abonner à Premium ? » */
 .premium-avantages {
-  background-color: #242424;
+  background-color: var(--fond-survol);
   border-radius: var(--arrondi-m);
   padding: var(--espace-6) var(--espace-4);
   color: var(--texte-principal);

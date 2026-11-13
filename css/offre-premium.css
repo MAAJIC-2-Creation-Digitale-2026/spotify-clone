@@ -9,7 +9,7 @@
 /* --- CARTES --- */
 .premium-card {
   position: relative;
-  background-color: #242424;
+  background-color: var(--fond-survol);
   border-radius: var(--arrondi-m);
   padding: 20px 16px;
   overflow: hidden;

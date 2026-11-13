@@ -123,6 +123,10 @@
   font-weight: var(--graisse-forte);
 }
 
+.premium-entete-conditions a{
+  text-decoration: underline;
+}
+
 /* .premium-entete-visuel → position: relative ; margin: 0 -16px ; height ; display: flex (texte en bas) */
 /* .premium-entete-image → position: absolute ; inset: 0 ; object-fit: cover */
 /* .premium-entete-visuel::after → content: "" ; position: absolute ; inset: 0 ; background: linear-gradient(...) */
