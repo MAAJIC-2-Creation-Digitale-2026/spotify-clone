@@ -8,7 +8,7 @@
 .biblio-entete {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var( --espace-3);
 }
 
 
@@ -23,7 +23,7 @@
 
 .biblio-entete-ligne-deux {
   display: flex;
-  justify-content: baseline;
+ 
 
 }
 
@@ -33,16 +33,20 @@
   
 }
 
+.biblio-entete-titre{
+font-size: 1.5rem;
+}
+
 .biblio-entete-avatar {
 
-  color: black;
+  color: var( --texte-sur-clair);
   background-color: var(--accent);
 
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: var(--arrondi-rond);
   padding: 0px;
-  margin-right: 10px;
+  margin-right: var( --espace-3);
 
   display: flex;
   align-items: center;
@@ -53,13 +57,13 @@
 }
 
 .biblio-entete-loupe {
-  font-size: 22px;
-  margin-right: 16px;
+  font-size: 1.5rem;
+  margin-right:  var( --espace-4);
   margin-left: auto
 }
 
 .biblio-entete-plus {
-  font-size: 26px;
+  font-size:1.5rem;
 }
 
 
@@ -75,19 +79,23 @@
 
 /* .biblio-entete-filtre */
 
-.biblio-entete-pillules {
-  margin-right: 10px;
+.biblio-entete-filtre {
+  margin-right: var( --espace-3);
 
   display: flex;
   align-items: center;
 
-  color: white;
+  color: var(--texte-principal);
   background-color: var(--fond-pilule);
-  border-radius: 30px;
+  border-radius: var( --arrondi-rond);
   font-size: 0.875rem;
 
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: var( --espace-3);
+  padding-left: var( --espace-3);
   height: 32px;
+
+  border: 1px;
+  border-style: solid;
+  border-color: var(--fond-actif);
 
 }
