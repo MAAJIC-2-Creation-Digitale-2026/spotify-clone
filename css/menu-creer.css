@@ -4,4 +4,70 @@
      titre blanc 16 px gras · phrase grise 14 px                                        */
 
 .menu-creer {
+  padding-bottom: var(--espace-2);
+  border-radius: var(--arrondi-m) var(--arrondi-m) 0 0;
+  background-color: var(--fond-actif);
+  font-family: var(--police);
+  margin-bottom : 80px
+}
+
+.menu-creer-poignee {
+  width: 40px;
+  height: var(--espace-1);
+  margin: var(--espace-4) auto var(--espace-2);
+  border-radius: var(--arrondi-rond);
+  background-color: var(--fond-pilule);
+}
+
+.menu-creer-ligne {
+  display: flex;
+  align-items: center;
+  gap: var(--espace-4);
+  min-height: 72px;
+  padding: 0 var(--espace-4);
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu-creer-icone {
+  display: grid;
+  place-items: center;
+  width: var(--taille-bouton-rond);
+  height: var(--taille-bouton-rond);
+  border-radius: 50%;
+  background-color: var(--fond-pilule);
+  color: var(--texte-secondaire);
+  font-size: var(--taille-l);
+}
+
+.menu-creer-texte {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-1);
+  min-width: 0;
+}
+
+.menu-creer-titre {
+  color: var(--texte-principal);
+  font-size: var(--taille-m);
+  font-weight: var(--graisse-forte);
+}
+
+.menu-creer-description {
+  color: var(--texte-secondaire);
+  font-size: var(--taille-s);
+}
+
+.menu-creer-dialogue {
+  width: 100%;
+  max-width: 480px;
+  margin: auto auto 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+}
+
+.menu-creer-dialogue::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
 }

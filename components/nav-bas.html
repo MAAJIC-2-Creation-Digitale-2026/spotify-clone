@@ -31,9 +31,13 @@
       <i class="fa-brands fa-spotify icon-navbar" aria-hidden="true"></i>
       <span class="nav-bas-texte">Premium</span>
     </a></li>
-    <li><a class="nav-bas__lien" href="#">
-      <i class="fa-solid fa-plus icon-navbar" aria-hidden="true"></i>
-      <span class="nav-bas-texte">Créer</span>
-    </a></li>
+    <li><button class="nav-bas__lien" type="button" data-ouvrir-creer>
+  <i class="fa-solid fa-plus icon-navbar" aria-hidden="true"></i>
+  <span class="nav-bas-texte">Créer</span>
+</button></li>
   </ul>
 </nav>
+
+<dialog class="menu-creer-dialogue" id="dialogue-creer">
+  <div data-include="components/menu-creer.html"></div>
+</dialog>

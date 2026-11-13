@@ -38,6 +38,14 @@
    color: var(--texte-principal);
 }
 
+button.nav-bas__lien {
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
 /* .nav-bas ul        → Flexbox, 5 colonnes de même largeur, list-style: none */
 /* .nav-bas-lien      → icône AU-DESSUS du texte (flex-direction: column), gris, centré */
 /* .nav-bas-texte     → 11 px */

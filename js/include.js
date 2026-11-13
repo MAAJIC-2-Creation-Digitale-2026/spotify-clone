@@ -91,3 +91,15 @@
     demarrer();
   }
 })();
+
+/* ---------- Menu « Créer » (T16 bonus) ---------- */
+document.addEventListener('click', (evenement) => {
+  const dialogue = document.getElementById('dialogue-creer');
+  if (!dialogue) return;
+
+  if (evenement.target.closest('[data-ouvrir-creer]')) {
+    dialogue.showModal();
+  } else if (evenement.target === dialogue) {
+    dialogue.close();
+  }
+});
