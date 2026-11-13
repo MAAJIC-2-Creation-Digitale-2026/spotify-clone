@@ -45,7 +45,7 @@ const PISTES = [
   {
     titre: 'Le col des Bœufs',
     artiste: 'Isaure Delmas',
-    pochette: 'assets/img/pochettes/lettres-du-col.jpg ',
+    pochette: 'assets/img/pochettes/lettres-du-col.jpg',
     fichier: 'assets/audio/titre-6.mp3'
   },
   {
