@@ -3,6 +3,17 @@
      photo RONDE 150 × 150 (border-radius: 50% ; object-fit: cover)
      nom blanc 14 px, CENTRÉ sous la photo                                          */
 
+
+
+
+.carte-artiste{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 .carte-artiste-image {
 
   width: 150px;
@@ -12,17 +23,8 @@
 
 }
 
-
-
-.boite {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .carte-artiste-nom {
-  color: white;
+  color: var(--fond-clair);
   padding-top: var(--espace-2);
 }
 
