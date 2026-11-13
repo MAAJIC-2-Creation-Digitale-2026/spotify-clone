@@ -13,12 +13,34 @@
   gap: var(--espace-4);
   justify-content: center;
   text-align: center;
+  padding: var(--espace-4);
 }
 .logo{
   font-size: 40px;
   color: var(--fond-clair);
 }
 .connexion-form h1 {
-  font-size: 48px;
+  font-size: 28px;
   font-weight: var(--graisse-forte);
+}
+#email, #mdp {
+  font-size: var(--taille-s);
+  font-weight: var(--graisse-forte);
+  text-align: left;
+  height: var(--hauteur-champ);
+  background-color: var(--fond-bloc);
+  border: 1px solid #727272;
+  border-radius: var(--arrondi-s);
+}
+:focus-visible {
+  border: 2px solid var(--fond-clair);
+}
+.connexion-form-bouton {
+  background-color: var(--accent);
+  color: var(--texte-sur-accent);
+  font-weight: var(--graisse-forte);
+  height: var(--hauteur-champ);
+  border-radius: var(--arrondi-rond);
+  border: none;
+  cursor: pointer;
 }
