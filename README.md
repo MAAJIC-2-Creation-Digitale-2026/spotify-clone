@@ -188,4 +188,7 @@ Pas besoin de Node ni de `npm install` : Live Server suffit.
   - `saphir-nwar.jpg` : [Özge Karzan](https://unsplash.com/fr/photos/un-homme-sans-chemise-debout-devant-un-fond-orange-tnQpg-v3N1k)
   - `orchestre-du-lagon.jpg` : [Kazuo ota](https://unsplash.com/fr/photos/un-orchestre-se-produit-sur-une-scene-de-concert-NNVNasAXPWQ)
 - Bandeau de la page Premium (`bandeau-premium.svg`) : image provisoire créée pour le projet.
-- Musiques : _(titre, artiste, source, licence)_
+- Musiques : [Pixabay Music](https://pixabay.com/music/), sous [licence Pixabay](https://pixabay.com/service/license-summary/) (usage gratuit, crédit apprécié). Les mp3 sont lus directement depuis le site de Pixabay :
+  - piste 0, « Ti lampé » (Lova Kaz) : [Jabali - Breakbeat Of Africa, par Rockot](https://pixabay.com/music/world-jabali-breakbeat-of-africa-african-tribe-electronic-fusion-253188/)
+  - piste 1, « Bleu piscine » (Nayla Rivière) : [Summer Pop, par The_Mountain](https://pixabay.com/music/pop-summer-pop-593072/)
+  - piste 2, « Coulée » (Piton Club) : [Hip Hop Beat, par AtlasAudio](https://pixabay.com/music/alternative-hip-hop-hip-hop-beat-606262/)
