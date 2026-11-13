@@ -4,9 +4,7 @@
      pochette centrée ≈ 240 × 240, ombre portée (box-shadow)
      titre 24 px gras à gauche · créateur 14 px blanc gras · infos 14 px gris            */
 
-.playlist-entete {
-  /* background: linear-gradient(...) ; padding ; marges négatives si tu veux toucher les bords */
-}
+
 
 /* .playlist-entete-image → display: block ; margin: 0 auto (centrée) */
 /* .playlist-entete-titre */
@@ -28,7 +26,3 @@
   overflow: hidden;
 }
 
-.playlist-entete-image {
-  
-
-}

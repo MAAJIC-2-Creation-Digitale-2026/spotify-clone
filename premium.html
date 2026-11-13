@@ -1,53 +1,90 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium — Spotify (clone)</title>
-  <link rel="icon" href="assets/img/favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/page-mobile.css">
-  <link rel="stylesheet" href="css/nav-bas.css">
-  <link rel="stylesheet" href="css/barre-haut.css">
-  <link rel="stylesheet" href="css/carte.css">
-  <link rel="stylesheet" href="css/rangee.css">
-  <link rel="stylesheet" href="css/carte-artiste.css">
-  <link rel="stylesheet" href="css/ligne-titre.css">
-  <link rel="stylesheet" href="css/mini-lecteur.css">
-  <link rel="stylesheet" href="css/recherche-entete.css">
-  <link rel="stylesheet" href="css/tuile-genre.css">
-  <link rel="stylesheet" href="css/biblio-entete.css">
-  <link rel="stylesheet" href="css/element-biblio.css">
-  <link rel="stylesheet" href="css/playlist-entete.css">
-  <link rel="stylesheet" href="css/playlist-actions.css">
-  <link rel="stylesheet" href="css/connexion-form.css">
-  <link rel="stylesheet" href="css/offre-premium.css">
-  <link rel="stylesheet" href="css/menu-creer.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium — Spotify (clone)</title>
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/page-mobile.css">
+<link rel="stylesheet" href="css/nav-bas.css">
+<link rel="stylesheet" href="css/barre-haut.css">
+<link rel="stylesheet" href="css/carte.css">
+<link rel="stylesheet" href="css/rangee.css">
+<link rel="stylesheet" href="css/carte-artiste.css">
+<link rel="stylesheet" href="css/ligne-titre.css">
+<link rel="stylesheet" href="css/mini-lecteur.css">
+<link rel="stylesheet" href="css/recherche-entete.css">
+<link rel="stylesheet" href="css/tuile-genre.css">
+<link rel="stylesheet" href="css/biblio-entete.css">
+<link rel="stylesheet" href="css/element-biblio.css">
+<link rel="stylesheet" href="css/playlist-entete.css">
+<link rel="stylesheet" href="css/playlist-actions.css">
+<link rel="stylesheet" href="css/connexion-form.css">
+<link rel="stylesheet" href="css/offre-premium.css">
+<link rel="stylesheet" href="css/premium-entete.css">
+<link rel="stylesheet" href="css/premium-avantages.css">
+<link rel="stylesheet" href="css/menu-creer.css">
 </head>
 <body class="page">
 
-  <main class="page-contenu">
-    <h1 class="page-titre-section" style="font-size:28px">Essayez 1 mois de Premium</h1>
-    <div data-include="components/offre-premium.html" data-nom="Individuel" data-prix="10,99 € par mois" data-couleur="#ffd2d7">
-      <li>1 compte Premium</li>
-      <li>Écoute sans pub</li>
-      <li>Téléchargement des titres</li>
-    </div>
-    <div data-include="components/offre-premium.html" data-nom="Étudiants" data-prix="5,99 € par mois" data-couleur="#c4b1d4">
-      <li>1 compte Premium vérifié</li>
-      <li>Réduction pour les étudiants</li>
-      <li>Écoute sans pub</li>
-    </div>
-  </main>
+<!-- Maquette (Drive) : telephone/05-premium-page-entiere.png
+     De haut en bas : T18 bandeau · T19 « Pourquoi s'abonner » · titre « Abonnements disponibles » · T15 × 4 offres
+     data-essai / data-ensuite / data-bouton / data-conditions des offres : pour le ticket T20 (après T15). -->
+<main class="page-contenu">
 
-  <div class="page-bas">
-    <div data-include="components/mini-lecteur.html"></div>
-    <div data-include="components/nav-bas.html" data-actif="premium"></div>
-  </div>
+<!-- T18 premium-entete : modèle (Drive, maquette) telephone/composants/T18-premium-entete.png -->
+<div data-include="components/premium-entete.html" data-image="assets/img/bandeau-premium.svg" data-etiquette="Premium Personnel" data-titre="Votre musique sans limites. Essayez Premium Personnel pendant 1 mois pour 0 € avec Spotify." data-bouton="Essayez pendant 1 mois pour 0 €">
+0 € pour 1 mois, puis 12,14 € par mois. Offre uniquement disponible si vous n'avez jamais essayé Premium et en cas d'abonnement via Spotify. Les offres via Google Play peuvent différer. <a href="#">Offre soumise à conditions.</a>
+</div>
 
-  <script src="js/include.js" defer></script>
-  <script src="js/player.js" defer></script>
+<!-- T19 premium-avantages : modèle (Drive, maquette) telephone/composants/T19-premium-avantages.png -->
+<div data-include="components/premium-avantages.html" data-titre="Pourquoi s'abonner à Premium ?">
+<li><i class="fa-solid fa-bullhorn"></i> Écoute de musique sans pub</li>
+<li><i class="fa-regular fa-circle-down"></i> Téléchargez pour écouter en mode hors connexion</li>
+<li><i class="fa-solid fa-shuffle"></i> Choisissez l'ordre de vos titres</li>
+<li><i class="fa-solid fa-headphones"></i> Qualité sonore Lossless</li>
+<li><i class="fa-solid fa-user-group"></i> Écoutez avec d'autres personnes en temps réel</li>
+<li><i class="fa-solid fa-list-ul"></i> Organisez la file d'attente de lecture</li>
+</div>
+
+<section class="page-liste" style="gap:16px">
+<h2 class="page-titre-section" style="font-size:24px">Abonnements disponibles</h2>
+
+<!-- T15 offre-premium : modèle (Drive, maquette) telephone/composants/T15-offre-premium.png -->
+<div data-include="components/offre-premium.html" data-nom="Personnel" data-prix="0 € pour 1 mois" data-couleur="#1ed760" data-essai="0 € pour 1 mois" data-ensuite="12,14 €/mois ensuite" data-bouton="Essayez pendant 1 mois pour 0 €" data-conditions="0 € pour 1 mois, puis 12,14 € par mois. Offre uniquement disponible si vous n'avez jamais essayé Premium et en cas d'abonnement via Spotify. Les offres via Google Play peuvent différer.">
+<li>1 compte Spotify Premium</li>
+<li>12 heures/mois d'écoute pour les livres audio faisant partie de notre catalogue d'abonnement</li>
+<li>Annulez à tout moment</li>
+</div>
+<div data-include="components/offre-premium.html" data-nom="Étudiants" data-prix="0 € pour 1 mois" data-couleur="#91eeda" data-essai="0 € pour 1 mois" data-ensuite="7,07 €/mois ensuite" data-bouton="Essayez pendant 1 mois pour 0 €" data-conditions="0 € pour 1 mois, puis 7,07 € par mois. Disponible uniquement si vous n'avez jamais essayé Premium et si vous avez souscrit votre abonnement via Spotify. Offre réservée aux personnes inscrites au sein d'un établissement d'enseignement supérieur accrédité.">
+<li>1 compte Premium vérifié</li>
+<li>Réduction pour les étudiants et étudiantes éligibles</li>
+<li>Annulez à tout moment</li>
+</div>
+<div data-include="components/offre-premium.html" data-nom="Duo" data-prix="17,20 €/mois" data-couleur="#ffa178" data-essai="" data-ensuite="" data-bouton="Obtenir Premium Duo" data-conditions="Pour les couples résidant à la même adresse.">
+<li>2 comptes Spotify Premium</li>
+<li>12 heures/mois d'écoute de notre catalogue d'abonnement de livres audio (gestionnaire de l'abonnement uniquement)</li>
+<li>Annulez à tout moment</li>
+</div>
+<div data-include="components/offre-premium.html" data-nom="Famille" data-prix="21,24 €/mois" data-couleur="#d8a3ff" data-essai="" data-ensuite="" data-bouton="Obtenir Premium Famille" data-conditions="Pour jusqu'à 6 membres d'une famille résidant à la même adresse.">
+<li>Jusqu'à 6 comptes Premium</li>
+<li>Contrôle parental sur tous les membres de l'abonnement</li>
+<li>12 heures/mois d'écoute de notre catalogue d'abonnement de livres audio (gestionnaire de l'abonnement uniquement)</li>
+<li>Avantages Premium pour les membres de l'abonnement de moins de 15 ans</li>
+<li>Annulez à tout moment</li>
+</div>
+</section>
+</main>
+
+<div class="page-bas">
+<div data-include="components/mini-lecteur.html"></div>
+<div data-include="components/nav-bas.html" data-actif="premium"></div>
+</div>
+
+<script src="js/include.js" defer></script>
+<script src="js/player.js" defer></script>
 </body>
 </html>

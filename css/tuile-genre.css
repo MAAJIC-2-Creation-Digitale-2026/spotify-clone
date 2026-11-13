@@ -6,13 +6,37 @@
      qui dépasse un peu et se fait couper (overflow: hidden sur la tuile)                  */
 
 .tuile-genre {
-  /* position: relative ; overflow: hidden ; display: block ; height ; border-radius */
-}
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 100px;
+  border-radius: var(--arrondi-carte);
 
+  /* position: relative ; overflow: hidden ; display: block ; height ; border-radius */
+} 
+
+.tuile-genre-titre {
+  font-size: var(--taille-m);
+  color: var(--texte-principal);
+  font-weight: var(--graisse-forte);
+  padding-left: var(--espace-2);
+  padding-top: var(--espace-2);
+}
 /* .tuile-genre-titre */
+.tuile-genre-image {
+  position: absolute;
+  right: calc(var(--espace-3) * -1);
+  bottom: calc(var(--espace-3) * -1);
+  transform: rotate(25deg);
+  max-width: 80px;
+  border-radius: var(--arrondi-carte);
+}
 /* .tuile-genre-image → position: absolute ; right / bottom négatifs ; transform: rotate(...) */
 
 /* La grille de 2 colonnes (écrite dans la page autour des tuiles) : */
 .grille-genres {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espace-3);
   /* display: grid ; grid-template-columns: 1fr 1fr ; gap: 12px */
 }

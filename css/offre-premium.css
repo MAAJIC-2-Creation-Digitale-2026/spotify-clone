@@ -5,5 +5,123 @@
      avantages : liste à puces simples, 14 px, trait fin gris au-dessus
      bouton : pilule de la couleur var(--couleur), texte noir gras, toute la largeur          */
 
-.offre-premium {
+
+/* --- CARTES --- */
+.premium-card {
+  position: relative;
+  background-color: #242424;
+  border-radius: var(--arrondi-m);
+  padding: 20px 16px;
+  overflow: hidden;
+}
+
+.premium-divider {
+  border: none;
+  border-top: 1px solid #545454;
+  margin: 14px 0;
+}
+
+/* --- RUBAN D'OFFRE (0 € pour 1 mois) --- */
+.premium-ribbon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4px 14px;
+  font-size: var(--taille-xs);
+  font-weight: var(--graisse-forte);
+  color: var(--texte-sur-clair);
+  border-bottom-right-radius: var(--arrondi-m);
+  background-color: var(--couleur);
+}
+
+
+/* Décalage du header interne quand un ruban est présent */
+.premium-ribbon + .premium-plan-header {
+  margin-top: 18px;
+}
+
+/* 1. Masque le ruban s'il ne contient aucun texte ({{essai}} vide), c'est fou carrement*/
+.premium-ribbon:empty {
+  display: none;
+}
+
+/* 2. Remonte le header en annulant le décalage quand le ruban est vide */
+.premium-ribbon:empty + .premium-plan-header {
+  margin-top: 0;
+}
+
+/* --- DÉTAILS DES OFFRES --- */
+.premium-plan-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espace-1);
+  font-size: var(--taille-xs);
+  font-weight: var(--graisse-forte);
+  margin-bottom: var(--espace-2);
+}
+
+
+.offre-premium-nom {
+  font-weight: var(--graisse-forte);
+  font-size: var(--taille-l);
+  margin: 0 0 6px 0;
+  color: var(--couleur);
+}
+
+.offre-premium-prix {
+  font-size: var(--taille-s);
+  font-weight: var(--graisse-forte);
+  margin: 0;
+}
+
+.premium-plan-subprice {
+  font-size: var(--taille-xs);
+  color: var(--texte-secondaire);
+}
+
+.offre-premium-avantages {
+  padding-left: 18px;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  font-weight: var(--graisse-moyenne);
+}
+
+.offre-premium-avantages li {
+  font-size: var(--taille-s);
+}
+
+/* --- BOUTONS D'ACTION (CTA) --- */
+.premium-cta {
+  width: 100%;
+  height: var(--hauteur-champ);
+  border: none;
+  border-radius: var(--arrondi-rond);
+  color: var(--texte-sur-clair);
+  font-size: var(--taille-s);
+  font-weight: var(--graisse-forte);
+  cursor: pointer;
+  transition: transform 0.1s ease, filter 0.2s ease;
+  background-color: var(--couleur);
+}
+
+.premium-cta:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+.premium-cta:active {
+  transform: scale(0.98);
+}
+
+
+/* --- MENTIONS LÉGALES --- */
+.premium-legal {
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: var(--graisse-moyenne);
+  color: var(--texte-secondaire);
+  margin: 12px 0 0 0;
+  text-align: center;
 }
