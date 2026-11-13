@@ -8,6 +8,7 @@
   border-radius: var(--arrondi-m) var(--arrondi-m) 0 0;
   background-color: var(--fond-actif);
   font-family: var(--police);
+  margin-bottom : 80px
 }
 
 .menu-creer-poignee {
@@ -55,4 +56,18 @@
 .menu-creer-description {
   color: var(--texte-secondaire);
   font-size: var(--taille-s);
+}
+
+.menu-creer-dialogue {
+  width: 100%;
+  max-width: 480px;
+  margin: auto auto 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+}
+
+.menu-creer-dialogue::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
 }
